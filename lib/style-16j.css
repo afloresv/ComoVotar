@@ -171,7 +171,7 @@ div#header div#PasosMenu > div.active:before {
 	left:50%;
 	margin-top:37px;
 	margin-left:-134px;
-	background:rgba(256,256,256,0.1);
+	background:rgba(0,0,0,0.2);
 	padding:15px;
 	color:#CCC;
 	font-size:14px;
@@ -180,6 +180,7 @@ div#header div#PasosMenu > div.active:before {
 #PasoInicio #BotonInicio.active {
 	box-shadow:0 0 5px rgba(0,0,0,.07),
 		0 1px 30px rgba(0,0,0,.1);
+	border-bottom:solid 2px #fff;
 }
 #PasoInicio #BotonInicio > span {
 	display:block;
