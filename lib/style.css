@@ -66,7 +66,7 @@ div#header div#PasosMenu > div.active {
 	height:115px;
 }
 div#header div#PasosMenu > div.active > div {
-	border-top:solid 4px #811485;
+	border-top:solid 4px #ffcc00;
 	padding:26px 15px 42px 15px;
 }
 div#header div#PasosMenu > div.active:before {
@@ -98,29 +98,6 @@ div#header div#PasosMenu > div.active:before {
 #Hand.Point       { background:url(../res/hand_point.png)       no-repeat 114px 293px; }
 #Hand.Thumb       { background:url(../res/hand_thumb.png)       no-repeat 103px 291px; }
 
-#Hand #dedoManchado {
-	background:url(../res/dedo_manchado.png);
-	width:27px;
-	height:43px;
-	position:absolute;
-	top:268px;
-	left:112px;
-	display:none;
-	cursor:none;
-}
-#Hand #cleanPapel {
-	background:url(../res/clean.png);
-	width:173px;
-	height:146px;
-	position:absolute;
-	bottom:-300px;
-	right:-500px;
-	/*top:250px;
-	left:50px;*/
-	display:none;
-	cursor:none;
-}
-
 /*---------*/
 /* Wrapper */
 /*---------*/
@@ -140,7 +117,7 @@ div#header div#PasosMenu > div.active:before {
 	font-weight:400;
 	width:440px;
 	margin:auto;
-	margin-top:105px;
+	margin-top:115px;
 }
 #wrapper .TituloPaso > span {
 	font-size:20px;
@@ -175,52 +152,46 @@ div#header div#PasosMenu > div.active:before {
 	height:110px;
 	width:204px;
 	margin-top:-140px;
-	margin-left:-210px;
+	margin-left:-190px;
 	background:url(../res/ComoVotarBig.png);
 }
-#PasoInicio #MaquinasAll {
+#PasoInicio #ElPuebloDecideLogo {
 	position:absolute;
 	top:50%;
 	left:50%;
 	height:164px;
-	width:279px;
+	width:131px;
 	margin-top:-150px;
-	margin-left:-70px;
-	background:url(../res/all.png);
+	margin-left:50px;
+	background:url(../res/elpueblodecide.png);
 }
-#PasoInicio #EntregarCedula {
+#PasoInicio #BotonInicio {
 	position:absolute;
 	top:50%;
 	left:50%;
 	margin-top:37px;
-	margin-left:-164px;
+	margin-left:-134px;
 	background:rgba(256,256,256,0.1);
-	padding:15px 120px 15px 15px;
+	padding:15px;
 	color:#CCC;
 	font-size:14px;
+	text-align:center;
 }
-#PasoInicio #EntregarCedula > #CedulaSpace {
-	position:absolute;
-	top:-20px;
-	right:-20px;
-	background:url(../res/click_cedula.png) left;
-	height:130px;
-	width:119px;
+#PasoInicio #BotonInicio.active {
+	box-shadow:0 0 5px rgba(255,204,0,.07),
+		0 1px 30px rgba(255,204,0,.1);
 }
-#PasoInicio #EntregarCedula > .active {
-	background-position:right !important;
-}
-#PasoInicio #EntregarCedula > span {
+#PasoInicio #BotonInicio > span {
 	display:block;
 	color:#999;
 }
-#PasoInicio #EntregarCedula #EntregarCedulaLink {
+#PasoInicio #BotonInicio #BotonInicioLink {
 	position:absolute;
 	z-index:100;
-	top:55px;
-	right:20px;
-	height:50px;
-	width:48px;
+	top:0px;
+	right:0px;
+	height:100%;
+	width:100%;
 	cursor:none;
 }
 
@@ -235,14 +206,14 @@ div#header div#PasosMenu > div.active:before {
 	opacity:1;
 }
 .logo_ec {
-	width:147px;
-	height:46px;
-	background:url(../res/logo-ec.png);
+	width:110px;
+	height:30px;
+	background-image:url(../res/logo-vi.png);
 	left:30px;
 }
 .logo_ec_link {
-	width:157px;
-	height:56px;
+	width:120px;
+	height:40px;
 	left:25px;
 	position:absolute;
 	display:block;
@@ -354,59 +325,93 @@ div#header div#PasosMenu > div.active:before {
 
 #Paso1 {
 	height:400px;
-	width:500px;
+	width:520px;
 	margin:auto;
-	background:url(../res/Paso1.png) no-repeat center bottom;
 	position:relative;
 }
-#Paso1 #HandPaso1 {
-	width:121px;
-	height:199px;
+#Globe {
+	height:271px;
+	width:271px;
 	position:absolute;
-	z-index:9;
-	background:url(../res/hand_mesa.png) no-repeat;
+	top:20px;
+	left:0px;
+	background:url(../res/globe.png);
 }
-#Paso1 #huellaLink {
-	width:40px;
-	height:40px;
+#ElPuebloDecide16J {
+	background:#123B65;
+	border:solid 1px black;
+	color:rgba(255,255,255,.7);
 	position:absolute;
-	z-index:100;
-	bottom:155px;
-	left:116px;
-	cursor:none;
+	top:95px;
+	left:253px;
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	border-radius:7px;
+	box-shadow:0 3px 3px rgba(0,0,0,.1),
+		0 10px 5px rgba(0,0,0,.07),
+		0 10px 30px rgba(0,0,0,.07);
 }
-#Paso1 #huella {
-	background:url(../res/huella.gif);
-	width:25px;
-	height:20px;
-	position:absolute;
-	display:none;
-	z-index:5;
-	bottom:165px;
-	left:124px;
+#ElPuebloDecide16J > div {
+	padding:15px 22px 15px 40px;
 }
-#Paso1 #detalles {
-	position:absolute;
-	width:280px;
-	top:35px;
-	right:10px;
-	font-size:15px;
-	color:#444;
-	background:rgba(255,255,255,0.2);
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	border-radius:5px;
+#ElPuebloDecide16J > div > span {
+	font-weight:400;
+	font-style:italic;
+	color:white;
 }
-#Paso1 #detalles > div { padding:15px; }
-#Paso1 #indicacion {
-	padding-left:105px;
-	line-height:27px;
-	background:url(../res/DetallesHor.png) no-repeat left;
+#Paso1Desc1 {
 	position:absolute;
-	top:220px;
-	left:165px;
+	top:45px;
+	right:17px;
+	width:236px;
+	font-size:13px;
+	text-align:center;
+}
+#Paso1Desc2 {
+	position:absolute;
+	top:165px;
+	right:17px;
+	width:220px;
+	font-size:13px;
+	text-align:center;
+}
+#ContinuarAPaso2 {
+	background:#ffcc00;
+	border:solid 1px #997a00;
+	position:absolute;
+	top:215px;
+	left:334px;
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	border-radius:7px;
+	box-shadow:0 3px 3px rgba(0,0,0,.1),
+		0 10px 5px rgba(0,0,0,.07),
+		0 10px 30px rgba(0,0,0,.07);
+}
+#ContinuarAPaso2 > div {
+	padding:8px 13px;
+	font-size:16px;
+	font-weight:400;
 }
 
+#ElPuebloDecide16J.active,
+#ContinuarAPaso2.active {
+	box-shadow:0 3px 3px rgba(0,0,0,.1),
+		0 10px 5px rgba(0,0,0,.07),
+		0 10px 30px rgba(0,0,0,.07),
+		inset 0px 30px 100px -45px rgba(255,255,255,1);
+}
+
+.Paso1Link {
+	display:block;
+	height:100%;
+	width:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:100;
+	cursor:none;
+}
 
 /*--------*/
 /* Paso 2 */
@@ -414,370 +419,47 @@ div#header div#PasosMenu > div.active:before {
 
 #Paso2 {
 	position:relative;
-	width:570px;
+	width:470px;
 	height:450px;
-	background:url(../res/Paso2.png) no-repeat top center;
 	margin:auto;
+	background:url(../res/cedula.png) no-repeat 0px 100px;
 }
-#Paso2 #Pantalla {
-	width:161px;
-	height:162px;
+
+#Paso2Desc {
 	position:absolute;
-	top:66px;
-	left:40px;
-	z-index:1;
-	font-weight:300;
-}
-#Paso2 #Pantalla #showVoto {
-	width:80px;
-	height:77px;
-	overflow:hidden;
-	text-align:center;
-	-webkit-border-radius:2px;
-	-moz-border-radius:2px;
-	border-radius:2px;
-	margin:32px auto;
-	box-shadow:0 0 5px rgba(0,0,0,.05),
-		0 1px 20px rgba(0,0,0,.1);
-}
-#Paso2 #Pantalla #showVoto > #showTituloVoto {
-	font-size:10px;
-	color:#000;
-	background:#CCC;
-	text-align:center;
-	padding:2px 3px;
-}
-#Paso2 #Pantalla #showVoto > #showNadie {
-	font-size:17px;
-	line-height:17px;
-	color:#333;
-	padding:21px 0;
-}
-#Paso2 #Pantalla #showVoto > #showPartido {
-	height:85px;
-    font-family:'Open Sans',sans-serif;
-	font-weight:400;
-	font-size:9px;
-	line-height:13px;
-}
-#Paso2 #Pantalla #showVoto > #showPartido > div {
-	padding:2px 4px;
-	margin:2px;
-	background:#BBB;
-	opacity:0.6;
-	color:#FFF;
-	text-shadow:
-		0px 0px 0px #000,
-		1px 0px 0px #000,
-		0px 1px 0px #000,
-		1px 1px 0px #000;
-}
-#Paso2 #Pantalla .mensajeError {
-	background:#FFF;
-	text-align:center;
-	font-size:9px;
-	position:absolute;
-	top:55px;
-	left:26px;
-	box-shadow:0 0 5px rgba(0,0,0,.1),
-		0 1px 3px rgba(0,0,0,.2),
-		0 3px 5px rgba(0,0,0,.1),
-		0 5px 10px rgba(0,0,0,.1);
-	padding:5px;
-}
-#Paso2 #Pantalla .mensajeError span {
-	display:inline-block;
-	background:#000059 url(../res/boton_back.jpg);
-	margin-top:10px;
-	color:#FFF;
-	position:relative;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	border-radius:5px;
-	padding:3px 6px;
-}
-#Paso2 #Pantalla .mESeleccionar {
-	position:absolute;
-	z-index:20;
-	top:155px;
-	left:70px;
-	height:18px;
-	width:62px;
-}
-#Paso2 #Pantalla .mEVotar {
-	position:absolute;
-	z-index:20;
-	top:155px;
-	left:133px;
-	height:18px;
-	width:36px;
-}
-#Paso2 #botonSeleccionar {
-	position:absolute;
-	top:158px;
-	left:71px;
-	height:17px;
-	width:59px;
-	z-index:100;
-	cursor:none;
-}
-#Paso2 #botonVotarAnyway {
-	position:absolute;
-	top:158px;
-	left:132px;
-	height:17px;
-	width:34px;
-	z-index:100;
-	cursor:none;
-}
-#Paso2 #Pantalla .showTextoFin {
-	color:#444;
-	font-size:7px;
-	font-weight:700;
-	text-align:center;
-	margin-top:30px;
-}
-#Paso2 #Pantalla .showTextoFin div {
-	font-size:25px;
-	padding-top:10px;
-	padding-bottom:50px;
-	background:url(../res/arrow_end.png) no-repeat center bottom;
-}
-#Paso2 #Pantalla #botonVotar {
-	height:29px;
-	width:169px;
-	background:url(../res/boton_votar.jpg);
-	position:absolute;
-	bottom:-4px;
-	left:-4px;
-}
-#Paso2 #botonVotarLink {
-    height:18px;
-	width:57px;
-	position:absolute;
-	top:208px;
-	left:92px;
-	z-index:100;
-	-webkit-border-radius:4px;
-	-moz-border-radius:4px;
-	border-radius:4px;
-	cursor:none;
-}
-#Paso2 #botonVotarLink {
-    height:18px;
-	width:57px;
-	position:absolute;
-	top:208px;
-	left:92px;
-	z-index:100;
-	-webkit-border-radius:4px;
-	-moz-border-radius:4px;
-	border-radius:4px;
-	cursor:none;
-}
-.ComprobanteAnim {
-	width:108px;
-	height:43px;
-	position:absolute;
-	top:237px;
-	left:77px;
-	background:url(../res/Comprobante.jpg) no-repeat;
-	background-position:108px 0px;
-}
-#Paso2 #Tarjeton {
-	width:223px;
-	height:337px;
-	padding:5px;
-	position:absolute;
-	top:81px;
-	left:311px;
-	background:#FFF;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	border-radius:5px;
-	font-family:sans-serif;
-}
-#Paso2 #Tarjeton > .header_tarjeton {
-	border-bottom:solid 1px #BBB;
-	padding-bottom:5px;
+	top:20px;
+	left:22px;
+	width:280px;
 	font-size:14px;
-	opacity:0.6;
-}
-#Paso2 #Tarjeton > .header_tarjeton > span {
-	display:inline-block;
-	height:20px;
-	padding:0 2px;
-	background:#555;
-	margin-right:5px;
-	color:#FFF;
-	font-size:17px;
 	text-align:center;
-	-webkit-border-radius:2px;
-	-moz-border-radius:2px;
-	border-radius:2px;
 }
-#Paso2 #Tarjeton > .opciones_tarjeton > div {
-	float:left;
-	height:37px;
-	width:33px;
-	margin:5px 5px 0px 0px;
-	text-align:center;
-    font-family:'Open Sans',sans-serif;
-	font-weight:400;
-	font-size:11px;
-	line-height:33px;
-	cursor:none;
-	background:url(../res/multiple-mini.png);
-}
-#Paso2 #Tarjeton > .opciones_tarjeton > div:nth-child(6n) {
-	margin-right:0px;
-}
-
-#Paso2 #MultipleImg {
-	display:none;
+#EntregarCedula {
 	position:absolute;
-	height:210px;
-	width:210px;
-	background:#FFF no-repeat url(../res/multiple.png);
-	background-position:-5px -5px;
-	-webkit-border-radius:50%;
-	-moz-border-radius:50%;
-	border-radius:50%;
-	opacity:0;
-	box-shadow:
-		0px 0px 40px rgba(0,0,0,.4),
-		3px 3px 1px rgba(0,0,0,.2),
-		0px 0px 3px rgba(0,0,0,.2);
-	transition:top 0.5s, left 0.5s;
-}
-#Paso2 #MultipleImg.active {
-	top:108px !important;
-	left:322px !important;
-	-webkit-animation:appear 0.5s ease forwards;
-	   -moz-animation:appear 0.5s ease forwards;
-		-ms-animation:appear 0.5s ease forwards;
-		 -o-animation:appear 0.5s ease forwards;
-			animation:appear 0.5s ease forwards;
-}
-
-@-webkit-keyframes appear {
-	  0% { opacity:0; -webkit-transform:scale(0); }
-	 90% { opacity:1; -webkit-transform:scale(1.1); }
-	100% { opacity:1; -webkit-transform:scale(1); }
-}
-@-moz-keyframes appear {
-	  0% { opacity:0; -moz-transform:scale(0); }
-	 90% { opacity:1; -moz-transform:scale(1.1); }
-	100% { opacity:1; -moz-transform:scale(1); }
-}
-@-o-keyframes appear {
-	  0% { opacity:0; -o-transform:scale(0); }
-	 90% { opacity:1; -o-transform:scale(1.1); }
-	100% { opacity:1; -o-transform:scale(1); }
-}
-@keyframes appear {
-	  0% { opacity:0; transform:scale(0); }
-	 90% { opacity:1; transform:scale(1.1); }
-	100% { opacity:1; transform:scale(1); }
-}
-
-
-#Paso2 #MultipleImg > div {
-	margin:80px 0px 0px 151px;
-	width:22px;
-}
-#Paso2 #MultipleImg > div > div {
-	height:33px;
-	background:url(../res/LED.png) no-repeat center left;
-}
-#Paso2 #MultipleImg > div > div.active { background-position:right; }
-
-#Paso2 #TarjetonLink {
-	position:absolute;
-	z-index:100;
-	cursor:none;
-	width:228px;
-	top:115px;
-	left:314px;
-	opacity:0.1;
-}
-#Paso2 #TarjetonLink > div {
-	height:38px;
-	width:38px;
-	float:left;
-	background:none !important;
-}
-
-#Paso2 #MultipleLink {
-	position:absolute;
-	z-index:100;
-	cursor:none;
-	top:137px;
-	left:360px;
-	width:134px;
-}
-#Paso2 #MultipleLink > div:nth-child(1) { height:19px; margin-bottom:33px; }
-#Paso2 #MultipleLink > div { height:33px; }
-
-
-#Paso2 #elimVoto {
-	height:85px;
+	top:-60px;
+	right:0px;
+	height:268px;
 	width:80px;
+	background:url(../res/hand_receive.png) no-repeat;
+}
+#EntregarCedula #CedulaSpace {
 	position:absolute;
-	top:102px;
-	left:80px;
+	bottom:-74px;
+	right:-34px;
+	height:135px;
+	width:124px;
+	background:url(../res/cedula_space.png) no-repeat left;
+}
+#EntregarCedula #CedulaSpace.active {
+	background-position:right !important;
+}
+#EntregarCedula #CedulaLink {
+	position:absolute;
+	bottom:-65px;
+	right:4px;
+	height:40px;
+	width:40px;
 	z-index:100;
 	cursor:none;
-}
-
-div.color0 { background-color:#990000 !important; color:#FFF; }
-div.color1 { background-color:#FF9900 !important; color:#000; }
-div.color2 { background-color:#669900 !important; color:#000; }
-div.color3 { background-color:#006666 !important; color:#000; }
-div.color4 { background-color:#FF9933 !important; color:#000; }
-div.color5 { background-color:#000099 !important; color:#FFF; }
-div.color6 { background-color:#666633 !important; color:#000; }
-div.color7 { background-color:#FF0066 !important; color:#000; }
-div.color8 { background-color:#3399FF !important; color:#000; }
-div.color9 { background-color:#999966 !important; color:#000; }
-div.color10 { background-color:#336600 !important; color:#000; }
-
-
-@font-face {
-    font-family:'digital-7';
-    src: url('../res/fonts/digital-7_mono-webfont.eot');
-    src: url('../res/fonts/digital-7_mono-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../res/fonts/digital-7_mono-webfont.woff') format('woff'),
-         url('../res/fonts/digital-7_mono-webfont.ttf') format('truetype'),
-         url('../res/fonts/digital-7_mono-webfont.svg#digital-7mono') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-#RelojWrapper {
-	height:100px;
-	width:150px;
-	position:absolute;
-	bottom:50px;
-	left:45px;
-	background:#FFF;
-	box-shadow:0px 0px 0 rgb(228,228,228),0px -1px 0 rgb(212,212,212),0px -2px 0 rgb(195,195,195), 0px -3px 0 rgb(178,178,178),0px -4px 3px rgba(0,0,0,0.15),0px -4px 1px rgba(0,0,0,0.2),0px 0px 3px rgba(0,0,0,.2);
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	border-radius:5px;
-	font-size:13px;
-	line-height:13px;
-	text-align:center;
-}
-#RelojWrapper > div:nth-child(1) {
-	font-size:16px;
-	line-height:16px;
-	padding-top:3px;
-}
-#RelojWrapper > div#tiempo {
-	font-size:60px;
-	line-height:60px;
-	font-family:'digital-7';
-	color:#A30000;
 }
 
 /*--------*/
@@ -786,13 +468,71 @@ div.color10 { background-color:#336600 !important; color:#000; }
 
 #Paso3 {
 	position:relative;
+	width:450px;
+	height:337px;
+	margin:auto;
+	margin-top:30px;
+}
+#Paso3 #Paso3Back {
+	height:100%;
+	width:100%;
+	background:url(../res/boleta.jpg);
+	box-shadow:0 3px 3px rgba(0,0,0,.1),
+		0 10px 5px rgba(0,0,0,.07),
+		0 10px 30px rgba(0,0,0,.07);
+}
+
+#Paso3 #EntregaBoleta {
+	position:absolute;
+	height:354px;
+	width:360px;
+	top:0px;
+	left:50%;
+	margin-left:-215px;
+	background:url(../res/entrega_boleta.png);
+}
+
+#Paso3 .Boleta {
+	position:absolute;
+	top:82px;
+	right:60px;
+	height:220px;
+	width:70px;
+}
+#Paso3 .Boleta > div {
+	height:30px;
+	margin-top:40px;
+}
+#Paso3 .Boleta > div > div {
+	height:30px;
+	width:26px;
+	float:left;
+}
+#Paso3 .Boleta > div > div:last-child {
+	margin-left:18px;
+}
+#Paso3 .BoletaShow > div > div.active {
+	background:url(../res/circle_check.png) no-repeat top right;
+}
+
+#Paso3 .BoletaLink {
+	z-index:100;
+	cursor:none;
+}
+
+/*--------*/
+/* Paso 4 */
+/*--------*/
+
+#Paso4 {
+	position:relative;
 	width:400px;
 	height:400px;
-	background:url(../res/Paso3.png) no-repeat center 38px;
+	background:url(../res/Paso4.png) no-repeat center 38px;
 	margin:auto;
 	cursor:none;
 }
-#Paso3 #Caja {
+#Paso4 #Caja {
 	position:absolute;
 	width:400px;
 	height:100px;
@@ -815,7 +555,7 @@ div.color10 { background-color:#336600 !important; color:#000; }
 	height:12px;
 	margin-top:60px;
 }
-#Paso3 .ShowOk {
+#Paso4 .ShowOk {
 	top:70px;
 	left:186px;
 	z-index:101 !important;
@@ -823,18 +563,18 @@ div.color10 { background-color:#336600 !important; color:#000; }
 
 
 /*--------*/
-/* Paso 4 */
+/* Paso 5 */
 /*--------*/
 
-#Paso4 {
+#Paso5 {
 	position:relative;
 	width:620px;
 	height:500px;
-	background:url(../res/Paso4.png) no-repeat bottom center;
+	background:url(../res/Paso5.png) no-repeat bottom center;
 	margin:auto;
 	cursor:none;
 }
-#Paso4 #firma {
+#Paso5 #firma {
 	position:absolute;
 	z-index:2;
 	width:55px;
@@ -843,7 +583,7 @@ div.color10 { background-color:#336600 !important; color:#000; }
 	left:375px;
 	background:url(../res/firma.png) no-repeat center;
 }
-#Paso4 #FirmaHuellaLink {
+#Paso5 #FirmaHuellaLink {
 	position:absolute;
 	z-index:100;
 	width:95px;
@@ -851,7 +591,7 @@ div.color10 { background-color:#336600 !important; color:#000; }
 	top:204px;
 	left:375px;
 }
-#Paso4 #huella {
+#Paso5 #huella {
 	position:absolute;
 	z-index:2;
 	width:55px;
@@ -860,7 +600,7 @@ div.color10 { background-color:#336600 !important; color:#000; }
 	left:416px;
 	background:url(../res/huella.png) no-repeat center;
 }
-#Paso4 #detalles {
+#Paso5 #detalles {
 	position:absolute;
 	top:10px;
 	left:375px;
@@ -873,76 +613,7 @@ div.color10 { background-color:#336600 !important; color:#000; }
 	-moz-border-radius:5px;
 	border-radius:5px;
 }
-#Paso4 #detalles > div { padding:15px; }
-
-
-/*--------*/
-/* Paso 5 */
-/*--------*/
-
-#Paso5 {
-	background:url(../res/Paso5.png) no-repeat center 95px;
-	width:300px;
-	height:250px;
-	margin:auto;
-	position:relative;
-}
-#Paso5 #TintaTop {
-	background:url(../res/TintaTop.png) no-repeat bottom center;
-	width:300px;
-	height:300px;
-	position:absolute;
-	bottom:0px;
-	cursor:none;
-}
-#Paso5 #lock1Paso5,
-#Paso5 #lock2Paso5 {
-	height:50px;
-	width:40px;
-	position:absolute;
-	top:46px;
-	z-index:100;
-	overflow:hidden;
-	cursor:none;
-}
-#Paso5 #lock1Paso5:hover,
-#Paso5 #lock2Paso5:hover {
-	height:90px;
-}
-#Paso5 #lock1Paso5 { left:83px; }
-#Paso5 #lock2Paso5 { right:83px; }
-
-#Paso5 #lock1Paso5 div,
-#Paso5 #lock2Paso5 div {
-	height:20px;
-	margin-top:70px;
-	cursor:none;
-}
-#Paso5 .ShowOk { top:196px; }
-#Paso5 .ShowOk.Ok1Paso5 { left:82px; }
-#Paso5 .ShowOk.Ok2Paso5 { right:82px; }
-
-#Paso5 #indicacion {
-	margin:auto;
-	margin-top:30px;
-	width:170px;
-	text-align:center;
-	font-size:15px;
-}
-#Paso5 #indicacion b { font-weight:400; }
-#Paso5 #indicacion > .hor {
-	height:5px;
-	border:solid 1px #000;
-	border-top:none;
-	margin:top:3px;
-}
-#Paso5 #indicacion > .ver {
-	width:106px;
-	height:40px;
-	margin:auto;
-	background:url(../res/DetallesVer.png) no-repeat left bottom;
-}
-
+#Paso5 #detalles > div { padding:15px; }
 
 /*----------*/
 /* Paso Fin */
@@ -1072,7 +743,7 @@ div.color10 { background-color:#336600 !important; color:#000; }
 	transform:rotate(-90deg);
 	position:absolute;
 	top:30px;
-	right:35px;
+	right:30px;
 	color:rgba(255,255,255,0.6);
 }
 
