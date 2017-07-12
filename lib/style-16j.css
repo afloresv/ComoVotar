@@ -22,7 +22,7 @@ div#header {
 	position:absolute;
 	z-index:49;
 	top:-110px;
-	background:#000 url(../res/back_dark.png);
+	background:#0b2f54;
 }
 div#header > div {
 	width:450px;
@@ -66,7 +66,7 @@ div#header div#PasosMenu > div.active {
 	height:115px;
 }
 div#header div#PasosMenu > div.active > div {
-	border-top:solid 4px #ffcc00;
+	border-top:solid 4px #fff;
 	padding:26px 15px 42px 15px;
 }
 div#header div#PasosMenu > div.active:before {
@@ -141,7 +141,7 @@ div#header div#PasosMenu > div.active:before {
 /*--------*/
 
 #PasoInicio {
-	background:#000 url(../res/back_dark.png);
+	background:#0b2f54;
 	color:#FFF;
 	position:relative;
 }
@@ -178,8 +178,8 @@ div#header div#PasosMenu > div.active:before {
 	text-align:center;
 }
 #PasoInicio #BotonInicio.active {
-	box-shadow:0 0 5px rgba(255,204,0,.07),
-		0 1px 30px rgba(255,204,0,.1);
+	box-shadow:0 0 5px rgba(0,0,0,.07),
+		0 1px 30px rgba(0,0,0,.1);
 }
 #PasoInicio #BotonInicio > span {
 	display:block;
@@ -620,7 +620,7 @@ div#header div#PasosMenu > div.active:before {
 /*----------*/
 
 #PasoFin {
-	background:#000 url(../res/back_dark.png);
+	background:#0b2f54;
 	color:#FFF;
 	position:relative;
 }
@@ -846,7 +846,7 @@ div#header div#PasosMenu > div.active:before {
 	position:absolute;
 	top:0px;
 	left:0px;
-	background:rgba(0,0,0,0.8);
+	background:rgba(11,47,84,0.8);
 	z-index:200;
 	display:none;
 }
