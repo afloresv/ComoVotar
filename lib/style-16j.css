@@ -495,25 +495,29 @@ div#header div#PasosMenu > div.active:before {
 
 #Paso3 .Boleta {
 	position:absolute;
-	top:82px;
-	right:60px;
-	height:220px;
-	width:70px;
+    top: 82px;
+    right: 52px;
+    height: 220px;
+    width: 85px;
 }
 #Paso3 .Boleta > div {
-	height:30px;
-	margin-top:40px;
+	height:40px;
+	margin-top: 32px;
 }
 #Paso3 .Boleta > div > div {
 	height:30px;
-	width:26px;
+	width:30px;
 	float:left;
+	padding: 5px;
+	/* to test only */
+/*     background-color: rgba(243, 76, 76, 0.64)  */
+
 }
-#Paso3 .Boleta > div > div:last-child {
-	margin-left:18px;
+#Paso3 .Boleta > div > div:last-child { /* Votar NO */
+	margin-left: 5px;
 }
-#Paso3 .BoletaShow > div > div.active {
-	background:url(../res/circle_check.png) no-repeat top right;
+#Paso3 .BoletaShow > div > div.active { /* checkmark */
+	background:url(../res/circle_check.png) no-repeat 12px 6px;
 }
 
 #Paso3 .BoletaLink {
