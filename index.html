@@ -28,8 +28,9 @@
     <meta property='og:title' content='ComoVotar.com' />
     <meta property='fb:app_id' content='116668815147018' /> 
     
-    <meta name="viewport" content="width=600, initial-scale=0.5">    
+    <meta name="viewport" content="width=600, initial-scale=0.5 minimun-scale=1, maximum-scale=1">    
     <!-- CSS -->
+    <link href='lib/imported.css' rel='stylesheet' type='text/css'>
     <link href='lib/style-16j.css' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic' rel='stylesheet' type='text/css'>
 </head>
@@ -53,10 +54,12 @@
 		<div id='ComoVotar'></div>
 		<div id='ElPuebloDecideLogo'></div>
 		<div id='BotonInicio'>
-			<div id='BotonInicioLink'></div>
-			Aprende cómo manifestar tu voluntad<br>
-			durante el plebiscito de este 16J...
-			<span>¡Haz click aquí para empezar!</span>
+			<div id='BotonInicioLink'>
+			</div>
+                Aprende cómo manifestar tu voluntad<br>
+    			en el <strong >plebiscito de este 16 de julio</strong>
+    			<span class="call_to_action">¡Haz click aquí para empezar!</span>
+    			<span class="call_to_action mobile">Empezar</span>
 		</div>
 		<div class='logo logo_ec'></div>
 		<div id='DiasQuedan'>
@@ -84,23 +87,48 @@
 			</div>
 		</div>
 	</div>
-	<div><div class='TituloPaso'><span>1º paso | </span>Encuentra tu <i>Punto Soberano</i></div>
+	<div><div class='TituloPaso'><span>1º paso | </span>Encuentra dónde <i>participar</i></div>
 		<div id='Paso1'>
-			<div id='ElPuebloDecide16J'><div>
+    		
+<!--     		<iframe src="http://elpueblodecide16j.com" width="500" height="400"></iframe> -->
+            <section id="iframe-lugar">
+                <p class="explanation">Puedes encontrar el "puntos soberano" de tu conveniencia en la página oficial <a class="a_site_oficial" href="http://elpueblodecide16j.com" target="_blank" >elpueblodecide16j.com</a> o aquí abajo</p>
+
+<!--
+
+                <div id="ElPuebloDecide16J" class=""><div>
 				www.<span>elpueblodecide16j</span>.com
-			</div><a class='Paso1Link' href='http://elpueblodecide16j.com/' target='_blank'></a></div>
-			<div id='Globe'></div>
-			<div id='Paso1Desc1'>
-				Si todavía no sabes dónde manifestar tu
-				voluntad, ingresa en esta página web:
-			</div>
-			<div id='Paso1Desc2'>
-				Después de ubicar el punto soberano
-				más cercano a ti, haz click aquí!
-			</div>
-			<div id='ContinuarAPaso2'><div>
-				Continuar &raquo;
-			</div><span class='Paso1Link'></span></div>
+			</div><a class="Paso1Link" href="http://elpueblodecide16j.com/" target="_blank"></a></div>
+-->
+			
+			
+			
+                <img src="res/el_pueblo_decide.svg" class="el_pueblo_decide-logo">
+                <section id="find">
+                    <div class="slanted"></div>
+                    <div class="wrapper">
+                      <h2>Encuentra tu Punto Soberano</h2>
+                      <p>Venezolanos y Extranjeros residenciados en el país, mayores de 18 años.</p>
+                      <div id="search">
+                        <select id="state"><option val="">Selecciona tu estado...</option><option value="22">AMAZONAS</option><option value="2">ANZOATEGUI</option><option value="3">APURE</option><option value="4">ARAGUA</option><option value="5">BARINAS</option><option value="6">BOLIVAR</option><option value="7">CARABOBO</option><option value="8">COJEDES</option><option value="23">DELTA AMACURO</option><option value="1">DTTO. CAPITAL</option><option value="9">FALCON</option><option value="10">GUARICO</option><option value="11">LARA</option><option value="12">MERIDA</option><option value="13">MIRANDA</option><option value="14">MONAGAS</option><option value="15">NUEVA ESPARTA</option><option value="16">PORTUGUESA</option><option value="17">SUCRE</option><option value="18">TACHIRA</option><option value="19">TRUJILLO</option><option value="24">VARGAS</option><option value="20">YARACUY</option><option value="21">ZULIA</option></select>
+                        <select id="county" style="display: none;"></select>
+                        <a class="btn">Ver puntos en el extranjero</a>
+                      </div>
+                      <div id="overseas">
+                        <select id="country"><option val="">Selecciona el país...</option><option value="9905">AUSTRALIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </option><option value="9907">BARBADOS</option><option value="9901">BONAIRE</option><option value="9913">CANADA</option><option value="9915">CHILE</option><option value="9917">COLOMBIA</option><option value="9919">COSTA RICA</option><option value="9921">DINAMARCA</option><option value="9925">EL SALVADOR</option><option value="9926">ESPAÑA</option><option value="9927">ESTADOS UNIDOS</option><option value="9931">FRANCIA</option><option value="9937">HONDURAS</option><option value="9943">ITALIA</option><option value="9944">JAMAICA</option><option value="9948">LIBANO</option><option value="9950">MALASIA</option><option value="9902">MALTA</option><option value="9952">MÉXICO</option><option value="9956">NORUEGA</option><option value="9903">NUEVA ZELANDA</option><option value="9958">PANAMA</option><option value="9963">REP. DOMINICANA</option><option value="9973">SUIZA</option><option value="9975">TRINIDAD</option><option value="9977">URUGUAY</option></select>
+                        <a class="btn">Ver puntos en Venezuela</a>
+                      </div>
+                    </div>
+                    <div id="results"></div>
+                    <div class="FooterPaso2">
+                    	<btn id='ContinuarAPaso2' class='Paso1Link' >Continuar &raquo;</btn>
+                    </div>  
+              </section>
+                <div class="attibution">Datos obtenidos de la página ofical <a href="http://elpueblodecide16j.com" target="_blank" >elpueblodecide16j.com</a></div>
+            </section>
+                    <div class="FooterPaso2">
+                    	<btn id='ContinuarAPaso2' class='Paso1Link' >Continuar &raquo;</btn>
+                    </div>          
 		</div>
 	</div>
 	<div><div class='TituloPaso'><span>2º paso | </span>Identifícate</div>
@@ -185,8 +213,6 @@
 		<div id='logo_wrapper'>
 			<a class='logo logo_vi'
 				href='http://veinteligente.org' target='_blank'></a>
-			<a class='logo logo_vj'
-				href='http://votojoven.com' target='_blank'></a>
 		</div>
 	</div>
 </div>
@@ -218,6 +244,8 @@
   ga('create', 'UA-34540294-2', 'auto');
   ga('send', 'pageview');
 </script>
+
+<script src="lib/imported.js"></script>
 
 </body>
 </html>

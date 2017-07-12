@@ -182,9 +182,37 @@ div#header div#PasosMenu > div.active:before {
 		0 1px 30px rgba(0,0,0,.1);
 	border-bottom:solid 2px #fff;
 }
-#PasoInicio #BotonInicio > span {
+#PasoInicio #BotonInicio > span.call_to_action {
 	display:block;
-	color:#999;
+	color: white;
+	font-weight: bold;
+	padding-top: 20px;
+	display: none
+    font-size: 1.3em;
+	
+}
+#PasoInicio #BotonInicio > span.call_to_action.mobile{
+    display: block;
+    font-size: 1.5em;
+    background-color: rgba(255, 255, 255, 0.16);
+    padding: 5px;
+    margin-top: 20px;
+    font-style: italic;
+    
+/*
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+*/
+}
+
+@media (min-width: 600px){
+    #PasoInicio #BotonInicio > span.call_to_action{
+        display: block;
+    } 
+    #PasoInicio #BotonInicio > span.call_to_action.mobile{
+        display: none;
+    } 
 }
 #PasoInicio #BotonInicio #BotonInicioLink {
 	position:absolute;
@@ -376,6 +404,7 @@ div#header div#PasosMenu > div.active:before {
 	font-size:13px;
 	text-align:center;
 }
+/*
 #ContinuarAPaso2 {
 	background:#ffcc00;
 	border:solid 1px #997a00;
@@ -402,7 +431,9 @@ div#header div#PasosMenu > div.active:before {
 		0 10px 30px rgba(0,0,0,.07),
 		inset 0px 30px 100px -45px rgba(255,255,255,1);
 }
+*/
 
+/*
 .Paso1Link {
 	display:block;
 	height:100%;
@@ -413,6 +444,7 @@ div#header div#PasosMenu > div.active:before {
 	z-index:100;
 	cursor:none;
 }
+*/
 
 /*--------*/
 /* Paso 2 */
@@ -997,3 +1029,157 @@ div#header div#PasosMenu > div.active:before {
 	padding-right:7px;
 }
 #votos_show_comprobante > div.active:before { content:"\2713"; }
+
+
+
+
+
+
+
+
+/*------------*/
+/* OVERRRIDES */
+/*------------*/
+p.explanation{
+    font-size: 16px;
+    padding-top: 20px;
+    font-weight: 100;
+    color: #666;
+    font-style: italic;
+}
+
+p.explanation a{
+    font-style: normal;
+}
+
+
+
+#Paso1{
+    overflow-y: scroll;
+    min-height: 100%; 
+}
+section#iframe-lugar{
+    text-align: center;
+/*     background: transparent; */
+/*     overflow-y: scroll; */
+    font-size: 0.8em;
+/*
+    height: 100%;*/
+     max-height: 100%; 
+/*     min-height: 100%; */
+
+padding-bottom: 200px;
+}
+section#find .slanted{
+/*     display: none; */
+    
+}
+section#find .wrapper h2{
+    margin: 0;
+    background: none;
+    height: auto;
+    padding: 0px;
+    font-size: 1.4rem;
+}
+
+#find p{
+    font-size: 1rem;
+}
+
+#find #search input, #find #search select, #find #overseas input, #find #overseas selec{
+    font-size: 1.1rem;
+    
+}
+
+.el_pueblo_decide-logo{
+    min-width: 100%;
+    width: 100%;
+padding: 30px 110px 60px 110px;
+/* margin: -30px auto; */
+box-sizing: border-box
+}
+
+section#iframe-lugar .attibution{
+    background: #497097;
+    color: silver;
+    padding: 7px;
+    font-size: 0.85em;
+    font-weight: 400
+}
+section#iframe-lugar .attibution a{
+    color: white;
+}
+
+
+#ContinuarAPaso2 {
+	background:#ffcc00;
+	border:solid 1px #997a00;
+	position: static;
+	top:0;
+	left:0;
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	border-radius:7px;
+	box-shadow:0 3px 3px rgba(0,0,0,.1),
+		0 10px 5px rgba(0,0,0,.07),
+		0 10px 30px rgba(0,0,0,.07);
+	font-weight:400;
+	font-size:16px;
+	cursor: pointer !important;
+	padding:8px 13px;
+}
+
+
+btn#ContinuarAPaso2:hover{
+	box-shadow:0 3px 3px rgba(0,0,0,.1),
+		0 10px 5px rgba(0,0,0,.07),
+		0 10px 30px rgba(0,0,0,.07),
+		inset 0px 30px 100px -45px rgba(255,255,255,1);
+}
+.Paso1Link {
+	display: inline-block;
+	height:auto;
+	width:auto;
+	position:inherit;
+	top:0px;
+	left:0px;
+	z-index:100;
+	cursor: hand;
+}
+
+
+#ContinuarAPaso2 span{
+/*
+    height: auto;
+width: auto;   
+*/
+}
+
+#ElPuebloDecide16J > div{
+    padding: 15px 22px 15px 40px;
+}
+
+.FooterPaso2{
+    text-align: right;
+    padding: 15px;
+    color: black;
+}
+/*
+.a_site_oficial{
+    padding: 2px;
+    margin: 5px;
+    font-size: 14px;
+    background: #123B65;
+    border: solid 1px black;
+    color: rgba(255, 255, 255, .7);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .1), 0 10px 5px rgba(0, 0, 0, .07), 0 10px 30px rgba(0, 0, 0, .07);
+
+}
+
+.a_site_oficial:hover{
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .1), 0 10px 5px rgba(0, 0, 0, .07), 0 10px 30px rgba(0, 0, 0, .07), inset 0px 30px 100px -45px rgba(255, 255, 255, 1);
+    }
+*/
