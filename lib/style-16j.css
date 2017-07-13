@@ -182,6 +182,7 @@ div#header div#PasosMenu > div.active:before {
 		0 1px 30px rgba(0,0,0,.1);
 	border-bottom:solid 2px #fff;
 }
+
 #PasoInicio #BotonInicio > span {
 	display:block;
 	color:#999;
@@ -195,6 +196,44 @@ div#header div#PasosMenu > div.active:before {
 	width:100%;
 	cursor:none;
 }
+
+#PasoInicio #BotonInicio > span.call_to_action { 
+  display:none; 
+  color:#999; 
+  color: white; 
+  font-weight: bold; 
+  padding-top: 20px; 
+  display: none 
+    font-size: 1.3em; 
+   
+} 
+#PasoInicio #BotonInicio > span.call_to_action.mobile{ 
+    display: block; 
+    font-size: 1.5em; 
+    background-color: rgba(255, 255, 255, 0.16); 
+    padding: 5px; 
+    margin-top: 20px; 
+    font-style: italic; 
+     
+/* 
+    margin-left: -10px; 
+    margin-right: -10px; 
+    margin-bottom: -10px; 
+*/ 
+} 
+
+#PasoInicio #BotonInicio.active .call_to_action.mobile { 
+    background-color: rgba(255, 255, 255, 0.3); 
+} 
+ 
+@media (min-width: 600px){ 
+    #PasoInicio #BotonInicio > span.call_to_action{ 
+        display: block; 
+    }  
+    #PasoInicio #BotonInicio > span.call_to_action.mobile{ 
+        display: none; 
+    }  
+} 
 
 .logo {
 	display:block;
