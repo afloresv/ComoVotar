@@ -934,15 +934,24 @@ div#header div#PasosMenu > div.active:before {
 #ModalBack > #ModalPaso1 {
 	display:block;
 	width:550px;
-	height:450px;
+	min-height:450px;
+	height: 100%;
+/*     min-height: calc(100% - 150px); */
+    height: calc(100% - 150px);
 	overflow:hidden;
 }
 #ModalBack > #ModalPaso1 > div:nth-child(1) {
 	width:510px;
+	position: relative;
 }
 #ModalBack > #ModalPaso1 > iframe {
 	border:none;
-	margin:-163px 0 0 -16px;
+	margin:-150px 0 0 -16px;
+	height: 100%;
+    min-height: 100%;
+    height: calc(100% + 150px);
+    min-height: calc(100% + 150px);
+    overflow-y: scroll;
 }
 #ModalBack > div span.close {
 	height:20px;
@@ -1050,3 +1059,15 @@ div#header div#PasosMenu > div.active:before {
 	padding-right:7px;
 }
 #votos_show_comprobante > div.active:before { content:"\2713"; }
+
+
+/* OVEr */
+
+html.Paso1, html.Paso1 body {
+    overflow-y: auto;
+}
+
+html.Paso1 #ModalBack{
+    height: auto;
+    min-height: 100%;
+}
