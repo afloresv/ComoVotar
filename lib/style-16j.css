@@ -935,6 +935,7 @@ div#header div#PasosMenu > div.active:before {
 	display:block;
 	width:550px;
 	height:450px;
+	overflow:hidden;
 }
 #ModalBack > #ModalPaso1 > div:nth-child(1) {
 	width:510px;
