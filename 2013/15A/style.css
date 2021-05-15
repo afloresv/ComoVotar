@@ -1,0 +1,1524 @@
+/* @override 
+	http://comovotar.com/dev-andres/style.css */
+
+/*
+Genérico
+*/
+html {
+    height:            100%;
+    overflow:          hidden;
+}
+body {
+    height:            100%;
+    margin:            0px;
+	background-image: -moz-linear-gradient(315deg, rgba(9, 8, 9, 0.23) 0%,
+		rgba(118, 77, 161, 0.07) 39.2%, rgba(100, 77, 154, 0.07) 65.4%,
+		rgba(15, 14, 19, 0.18) 100%), url(Img/back.png);
+    background-image: -webkit-gradient(linear, left top, right bottom,
+		from(rgba(9, 8, 9, 0.23)), color-stop(0.392, rgba(118, 77, 161, 0.07)),
+		color-stop(0.654, rgba(100, 77, 154, 0.07)), to(rgba(15, 14, 19, 0.18))),
+		url(Img/back.png);
+    font-family:       sans-serif;
+    overflow:          hidden;
+}
+
+/*
+Estructura
+*/
+#wrapper {
+    height:            100%;
+    width:             700%;
+    margin-left:       100%;
+}
+#wrapper > div {
+    height:            100%;
+    width:             14.2857143%;
+    float:             left;
+    position:          relative;
+    text-align:        center;
+}
+#wrapper > div > div {
+    margin:            auto;
+}
+
+/*
+Variados
+*/
+#spin {
+    height:            100%;
+    width:             100%;
+}
+.CompOk, .BlancaOk, .AzulOk {
+    position:          absolute;
+    z-index:           25;
+    height:            70px;
+    width:             49px;
+    background:        url(Img/check.png);
+}
+.cerrarMensaje {
+    display:           inline-block;
+    padding:           6px 10px;
+    font-weight:       bold;
+    margin-top:        20px;
+    cursor:            pointer;
+
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+
+.back_window {
+    height:            100%;
+    width:             100%;
+    background:        url(Img/back.png);
+    opacity:           0.9;
+    position:          absolute;
+    z-index:           24;
+    top:               0px;
+    left:              0px;
+}
+.mas_info_button {
+    background:        url(Img/plus_info.png) no-repeat;
+    height:            20px;
+    width:             55px;
+    position:          absolute;
+    cursor:            pointer;
+}
+.mas_info_button_link {
+    height:            20px;
+    width:             55px;
+    position:          absolute;
+    z-index:           20;
+}
+.mas_info {
+    position:          absolute;
+    top:               50%;
+    left:              50%;
+    z-index:           30;
+    width:             350px;
+    background:        #FFF;
+    
+    box-shadow:        0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+    color:             #666;
+    font-size:         11px;
+    
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+.info_general {
+    width:             450px !important;
+}
+.mas_info > div {
+    padding:           20px 20px 8px 20px;
+}
+.mas_info > div > .cerrar_mas_info {
+    top:               10px !important;
+}
+.mas_info > div > .mas_info_titulo {
+    color:             #333;
+    font-family:       'Boogaloo', sans-serif;
+    font-size:         20px;
+    margin-top:        -5px;
+    padding-bottom:    8px;
+}
+.mas_info_cont {
+    font-size:         12px;
+    text-align:        left;
+    text-indent:       20px;
+}
+
+/*
+Header
+*/
+.header {
+    display:           inline-block;
+    position:          relative;
+    top:               0px;
+    margin:            auto;
+    height:            110px;
+    padding-left:      220px;
+    background:        url(Img/CVlogo.png) no-repeat bottom left;
+    font-family:       'Boogaloo', sans-serif;
+}
+.header > .inicio {
+    position:          absolute;
+    z-index:           20;
+    top:               18px;
+    left:              6px;
+    width:             180px;
+    height:            65px;
+    cursor:            pointer;
+}
+.header > .goTo1,
+.header > .goTo2,
+.header > .goTo3,
+.header > .goTo4,
+.header > .goTo5 {
+    cursor:            pointer;
+    display:           block;
+    float:             left;
+    margin:            25px 0px 0px 15px;
+    font-size:         40px;
+    color:             #EEE;
+    font-weight:       bold;
+    text-shadow:       0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+}
+.header > .active {
+    display:           block;
+    float:             left;
+    margin:            0px 0px 0px 15px;
+    position:          relative;
+}
+.header > .active > .num {
+    position:          absolute;
+    top:               -5px;
+    left:              0px;
+    font-size:         85px;
+    font-weight:       bold;
+    color:             #FFF;
+    text-shadow:       0 1px 0 #CCC,
+                       0 2px 0 #C9C9C9,
+                       0 3px 0 #BBB,
+                       0 4px 0 #B9B9B9,
+                       0 5px 0 #AAA,
+                       0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+}
+.header > .active > .paso {
+    position:          absolute;
+    top:               7px;
+    left:              45px;
+    font-size:         17px;
+    color:             #FFF;
+    text-shadow:       0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+}
+.header > .active > .desc {
+    padding:           10px 10px 10px 20px;
+    margin:            30px 0px 0px 30px;
+    background:        #FFF;
+    box-shadow:        0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+    color:             #333;
+    font-size:         18px;
+    
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+
+
+/*
+Manos
+*/
+div.hand {
+    width:             240px;
+    height:            320px;
+    position:          absolute;
+    z-index:           10;
+    cursor:            none;
+    display:           none;
+}
+div.hand_cedula {
+    background:        url(Img/hand_cedula.png) no-repeat top left;
+}
+div.point {
+    background:        url(Img/hand_point.png) no-repeat top left;
+}
+div.thumb {
+    background:        url(Img/hand_thumb.png) no-repeat top left;
+}
+div.hand_comprobante {
+    background:        url(Img/hand_comprobante.png) no-repeat top left;
+}
+div.hand_firma {
+    background:        url(Img/hand_firma.png) no-repeat top left;
+}
+div.hand_dedo {
+    width:             377px;
+    height:            311px;
+    position:          absolute;
+    z-index:           10;
+    cursor:            none;
+    display:           none;
+    background:        url(Img/hand_dedo.png) no-repeat;
+}
+div.hand_dedo > div.dedoManchado {
+    width:             27px;
+    height:            43px;
+    margin-left:       112px;
+    margin-top:        268px;
+    background:        url(Img/dedo_manchado.png) no-repeat;
+}
+div#hand_PresidenteMesa {
+    width:             121px;
+    height:            199px;
+    position:          absolute;
+    z-index:           9;
+    cursor:            auto;
+    background:        url(Img/hand_mesa.png) no-repeat;
+}
+
+
+/*
+Portada
+*/
+#Portada {
+    width:             510px;
+    position:          relative;
+    top:               50%;
+    margin-top:        -170px !important; /* CUIDADO */
+    cursor:            none;
+}
+.REClogo {
+	margin:			   auto;
+    height:            70px;
+    width:             215px;
+    background:        url(Img/eleccionciudadana.png) no-repeat center top;
+}
+#PortadaAll {
+    height:            180px;
+    margin:            auto;
+    background:        url(Img/CV.png) no-repeat center center;
+}
+#comenzar {
+    position:          relative;
+	margin-top:		   40px;
+    display:           inline-block;
+    padding:           7px 60px 7px 10px;
+    background:        #FFF;
+    box-shadow:        0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+    color:             #666;
+    font-size:         11px;
+    
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+#comenzar > .comenzar_cont {
+    height:            37px;
+    overflow:          hidden;
+}
+#comenzar span {
+    color:             #333;
+    font-family:       'Boogaloo', sans-serif;
+    font-size:         20px;
+}
+#comenzar .entregaTuCedula {
+    position:          absolute;
+    top:               -40px;
+    right:             -35px;
+    height:            145px;
+    width:             114px;
+    background:        url(Img/entregaTuCedula.png);
+}
+#comenzar .entregaLink {
+    position:          absolute;
+    bottom:            -25px;
+    right:             -10px;
+    height:            50px;
+    width:             50px;
+    z-index:           20;
+}
+
+/*
+Info
+*/
+#infoRE {
+    background:        url(Img/donde_voto.png) no-repeat center 20px;
+    width:             400px;
+    padding-top:       100px;
+}
+#infoRE > div {
+    background:        #FFF;
+    box-shadow:        0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+    
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+#infoRE > div > img {
+    display:           block;
+}
+#infoRE > div #continuar_pasos {
+    padding:           7px 10px;
+    background:        #8FBF00;
+    text-shadow:       0px 1px 0px #C8D0E7;
+    color:             #3C3D12;
+    font-size:         14px;
+    font-weight:       bold;
+    cursor:            pointer;
+    float:             right;
+    position:          absolute;
+    top:               21px;
+    right:             -10px;
+    
+    box-shadow:        0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+    
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+#infoRE > div #continuar_pasos > div {
+    position:          absolute;
+    top:               0px;
+    right:             -19px;
+    background:        url(Img/continuar_pasos.png);
+    height:            30px;
+    width:             23px;
+}
+#infoRE > div #atras_info {
+    padding:           7px 10px;
+    background:        #A5CB27;
+    color:             #3C3D12;
+    font-size:         12px;
+    font-weight:       bold;
+    cursor:            pointer;
+    float:             right;
+    position:          absolute;
+    top:               23px;
+    left:              -20px;
+
+    box-shadow:        0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+#infoRE > div > .datosElector {
+    padding:           15px;
+    background:        url(Img/back_name.jpg) no-repeat bottom center;
+    border-bottom:     1px solid #CCC;
+    position:          relative;
+}
+#infoRE > div > .datosElector > .electorNombre {
+    color:             #333;
+    font-family:       'Boogaloo', sans-serif;
+    font-size:         24px;
+    text-transform:    capitalize;
+}
+#infoRE > div > .datosElector > .electorCI {
+    color:             #888;
+    font-size:         13px;
+}
+#infoRE > div > .datos_varios {
+    padding:           15px;
+    text-align:        left;
+    background:        url(Img/back_info.jpg) no-repeat top center;
+    border-top:        1px solid #CCC;
+}
+#infoRE > div > .datos_varios .ubicacion {
+    color:             #666;
+    font-size:         11px;
+    margin-bottom:     8px;
+    text-transform:    capitalize;
+}
+#infoRE > div > .datos_varios .super_ubic {
+    color:             #AAA;
+    font-size:         10px;
+}
+#infoRE > div > .datos_varios .centro,
+#infoRE > div > .datos_varios .ubic_estado,
+#infoRE > div > .datos_varios .ubic_municipio,
+#infoRE > div > .datos_varios .ubic_parroquia {
+    color:             #333;
+    font-family:       'Boogaloo', sans-serif;
+    font-size:         22px;
+    margin-top:        -2px;
+    margin-bottom:     5px;
+    text-transform:    capitalize;
+    line-height:       19px;
+}
+#infoRE > div > .datos_varios .titulo_votos_emitir {
+    color:             #333;
+    font-family:       'Boogaloo', sans-serif;
+    font-size:         22px;
+    margin-bottom:     8px;
+}
+#infoRE > div > .datos_varios .num_votos {
+    color:             #333;
+    font-family:       'Boogaloo', sans-serif;
+    font-size:         20px;
+    display:           block;
+    width:             25px;
+    float:             left;
+}
+#infoRE > div > .datos_varios .tipo_votos {
+    color:             #888;
+    font-size:         12px;
+    line-height:       11px;
+    display:           block;
+    width:             130px;
+    float:             left;
+}
+#infoRE > div > .datos_varios .sep {
+    clear:             both;
+    height:            5px;
+}
+
+/*
+1º Paso | Lector de huellas
+*/
+.Lector {
+    position:          relative;
+    width:             500px;
+    height:            400px;
+    background:        url(Img/SAES-RSA.png) no-repeat bottom center;
+    margin:            auto;
+    cursor:            none;
+}
+div.huella {
+    background:        url(Img/huella.gif);
+    width:             25px;
+    height:            20px;
+    position:          absolute;
+    z-index:           5;
+    bottom:            165px;
+    left:              124px;
+    cursor:            none;
+}
+div.huellaLink {
+    width:             40px;
+    height:            40px;
+    position:          absolute;
+    z-index:           20;
+    bottom:            155px;
+    left:              116px;
+    cursor:            none;
+}
+#indicacionesHuella {
+    width:             300px;
+    padding-bottom:    110px;
+    position:          absolute;
+    bottom:            125px;
+    left:              200px;
+    background:        url(Img/PonTuHuella.png) no-repeat 40px bottom;
+}
+#indicacionesHuella > div {
+    background:        url(Img/Cedula.png) #FFF no-repeat right 10px;
+    padding:           7px 80px 7px 10px;
+    color:             #666;
+    font-size:         12px;
+    text-align:        left;
+    box-shadow:        0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+#indicacionesHuella > div > span {
+    line-height:       22px;
+    font-family:       'Boogaloo', sans-serif;
+    font-size:         22px;
+    color:             #333;
+}
+
+
+/*
+2º Paso | Maquinas de Votacion
+*/
+#TarjetonReal {
+    display:           none;
+    background:        #FFF;
+    position:          absolute;
+    top:               2.5%;
+    left:              50%;
+    margin-left:       -220px !important;
+    z-index:           50;
+    width:             440px;
+    height:            95%;
+    overflow:          scroll;
+    box-shadow:        0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+                       
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+#TarjetonReal > .tarjetonHeader {
+    position:          fixed;
+    padding:           20px 0px;
+    width:             440px;
+    font-family:       'Boogaloo', sans-serif;
+    font-size:         22px;
+    color:             #333;
+    background:        #FFF;
+    line-height:       20px;
+                   
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+   border-radius:     3px;
+}
+#TarjetonReal > .tarjetonHeader > span {
+    font-family:       sans-serif;
+    font-size:         12px;
+    color:             #666;
+    line-height:       auto;
+}
+#TarjetonReal #cerrarTarjeton {
+    position:          absolute;
+    top:               10px;
+    right:             10px;
+    height:            14px;
+    width:             14px;
+    background:        url(Img/cerrar.png) no-repeat center #666;
+    cursor:            pointer;
+
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+   border-radius:     3px;
+}
+#TarjetonReal #cerrarTarjeton:hover {
+    background-color:  #333;
+}
+#TarjetonReal > .tarjetonImagen {
+	background:        url(Img/Tarjeton.jpg);
+    margin:            auto;
+    margin-top:        90px;
+    width:             400px;
+    height:            758px;
+}
+#verTarjeton {
+    position:          absolute;
+    z-index:           1;
+    top:               17px;
+    left:              340px;
+    background:        #FFF url(Img/tarjetonIcon.png) no-repeat center right;
+    font-family:       'Boogaloo', sans-serif;
+    font-size:         16px;
+    padding:           5px 27px 5px 8px;
+    color:             #333;
+    box-shadow:        0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+#verTarjetonLink {
+    position:          absolute;
+    z-index:           20;
+    top:               17px;
+    left:              340px;
+    width:             174px;
+    height:            29px;
+
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+
+.MaquinasVotacion {
+    position:          relative;
+    width:             570px;
+    height:            600px;
+    background:        url(Img/Maquina.png) no-repeat top center;
+    margin:            auto;
+}
+.ComprobanteAnim {
+    width:             108px;
+    height:            43px;
+    position:          absolute;
+    top:               237px;
+    left:              77px;
+    background:        url(Img/Comprobante.jpg) no-repeat;
+    background-position:108px 0px;
+}
+.Pantalla {
+    width:             161px;
+    height:            162px;
+    position:          absolute;
+    top:               66px;
+    left:              40px;
+    z-index:           1;
+}
+.showVoto {
+    width:             67px;
+    height:            98px;
+    overflow:          hidden;
+    border:            #CCC solid 1px;
+    margin:            auto;
+    margin-top:        28px;
+    text-align:        center;
+    
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:     6px;
+}
+.CandidatoScreen {
+    background:        url(Img/hombreScreen.png) no-repeat center 26px;
+}
+.CandidataScreen {
+    background:        url(Img/mujerScreen.png) no-repeat center 26px;
+}
+.showVoto > .showTituloVoto {
+    text-align:        left;
+    font-size:         8px;
+    padding:           3px;
+    color:             #666;
+    background:        #CCC;
+    boder-bottom:      1px solid #FFF;
+    text-align:        center;
+}
+.showVoto > .showNadie {
+    font-size:         9px;
+    color:             #333;
+    padding:           37px 0px;
+}
+.showVoto > .showPartido {
+    font-size:         11px;
+    color:             #FFF;
+    background:        #333;
+}
+.showVoto > .showCandidato {
+    font-size:         9px;
+    color:             #333;
+    padding-top:       58px;
+}
+.mensajeError {
+    padding:           5px;
+    background:        #FFF;
+    text-align:        center;
+    font-size:         9px;
+    position:          absolute;
+    top:               55px;
+    left:              26px;
+    box-shadow:        0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.4),
+                       0 3px 5px rgba(0,0,0,.3),
+                       0 5px 10px rgba(0,0,0,.3);
+}
+.mensajeError span {
+    display:           inline-block;
+    padding:           3px 6px;
+    background:        #000059;
+    margin-top:        10px;
+    color:             #FFF;
+    position:          relative;
+    
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+.mESeleccionar {
+    position:          absolute;
+    z-index:           20;
+    top:               155px;
+    left:              70px;
+    height:            18px;
+    width:             62px;
+}
+.mEVotar {
+    position:          absolute;
+    z-index:           20;
+    top:               155px;
+    left:              133px;
+    height:            18px;
+    width:             36px;
+}
+.showTextoFin {
+    color:             #444;
+    font-size:         8px;
+    font-weight:       bold;
+    text-align:        center;
+    margin-top:        30px;
+}
+.showTextoFin div {
+    font-size:         25px;
+    padding-top:       10px;
+    padding-bottom:    50px;
+    background:        url(Img/arrow_end.png) no-repeat center bottom;
+}
+.botonVotar {
+    height:            29px;
+    width:             169px;
+    background:        url(Img/boton_votar.jpg);
+    position:          absolute;
+    bottom:            -4px;
+    left:              -4px;
+    font-size:         12px;
+    text-align:        center;
+    line-height:       29px;
+    color:             #555;
+}
+.botonVotarLink {
+    height:            18px;
+    width:             60px;
+    position:          absolute;
+    top:               208px;
+    left:              89px;
+    z-index:           20;
+    
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:     4px;
+}
+.nuloLink {
+    height:            83px;
+    width:             72px;
+    position:          absolute;
+    top:               113px;
+    left:              84px;
+    z-index:           19;
+}
+#led {
+    width:20px;
+    height:42px;
+    background:url(Img/LED.png);
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+    z-index:5;
+}
+.Tarjeton {
+    width:230px;
+    height:347px;
+    position:absolute;
+    top:80px;
+    left:313px;
+    z-index:1;
+    opacity:0.7;
+    background:rgba(256,256,256,0.8);
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+}
+.TituloTarjeton {
+    padding:5px 3px 5px 3px;
+    margin-right:5px;
+    color:#222;
+    font-size:14px;
+    font-weight:bold;
+    border-bottom:solid 1px #888;
+    margin-bottom:8px;
+    text-align:left;
+}
+.TituloTarjeton span {
+    font-size:6px;
+    font-weight:normal;
+    float:right;
+    text-align:right;
+}
+.Candidato {
+    width:32px;
+    height:37px;
+    margin:2px;
+    background:url(Img/hombre.png) center bottom no-repeat;
+    float:left;
+    border:solid 1px #888;
+}
+.Candidata {
+    width:32px;
+    height:37px;
+    margin:2px;
+    background:url(Img/mujer.png) center bottom no-repeat;
+    float:left;
+    border:solid 1px #888;
+}
+.Candidato span, .Candidata span {
+    display:block;
+    font-size:6px;
+    color:white;
+    background:#222;
+    text-align:center;
+
+}
+.Hueco {
+    width:38px;
+    height:43px;
+    float:left;
+}
+.TarjetonLink {
+    width:228px;
+    height:315px;
+    position:absolute;
+    top:112px;
+    left:313px;
+    z-index:20;
+}
+.CandidatoLink {
+    width:38px;
+    height:43px;
+    float:left;
+}
+@font-face {
+    font-family:'digital-7';
+    src: url('Fuentes/digital-7_mono-webfont.eot');
+    src: url('Fuentes/digital-7_mono-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Fuentes/digital-7_mono-webfont.woff') format('woff'),
+         url('Fuentes/digital-7_mono-webfont.ttf') format('truetype'),
+         url('Fuentes/digital-7_mono-webfont.svg#digital-7mono') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+div.clock {
+    width:116px;
+    position:absolute;
+    top:290px;
+    left:57px;
+    text-align:center;
+}
+.clock_ms {
+    font-family:'digital-7', sans-serif;
+    font-size:50px;
+    line-height:50px;
+    color:#CC0000;
+    text-shadow:0 1px 0 #310000,
+                0 2px 0 #7D0000,
+                0 10px 10px rgba(125,0,0,.5),
+                0 6px 1px rgba(0,0,0,.1),
+                0 0 5px rgba(0,0,0,.1),
+                0 1px 3px rgba(0,0,0,.3),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.25),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.15);
+}
+.clock_ms_done {
+    color:#9BC602 !important;
+    text-shadow:0 1px 0 #5A7200,
+                0 2px 0 #759401,
+                0 10px 10px rgba(173,217,0,.5),
+                0 6px 1px rgba(0,0,0,.1),
+                0 0 5px rgba(0,0,0,.1),
+                0 1px 3px rgba(0,0,0,.3),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.25),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.15) !important;
+}
+.texto_clock {
+    font-family: 'Boogaloo', cursive;
+    font-size:16px;
+    line-height:7px;
+    color:#333;
+    text-shadow:/*0 1px 0 #000,*/
+                0 6px 1px rgba(0,0,0,.1),
+                0 0 5px rgba(0,0,0,.1),
+                0 1px 3px rgba(0,0,0,.3),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.25),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.15);
+}
+
+
+/*
+3º Paso | Resguarda tu voto
+*/
+#mensaje3 {
+    position:          absolute;
+    z-index:           50;
+    width:             300px;
+    top:               50%;
+    left:              50%;
+    margin-left:       -150px !important;
+    margin-top:        -150px !important;
+    background:        url(Img/comprobanteFondo.png);
+    box-shadow:        0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+    
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+#mensaje3 > div {
+    padding:           20px 50px;
+    font-size:         12px;
+}
+#mensaje3 .compVota {
+    width:             171px;
+    height:            75px;
+    margin:            auto;
+    background:        url(Img/CompVota.png) no-repeat bottom center;
+}
+#mensaje3 .datosVota {
+    width:             170px;
+    padding:           20px 0px 30px 0px;
+    margin:            auto;
+    color:             #666;
+}
+#mensaje3 .cerrarMensaje {
+    background:        #663366;
+    color:             #FFF;
+}
+.moveComp {
+    position:          absolute;
+    z-index:           30;
+    width:             30px;
+    height:            57px;
+    top:               20px;
+    left:              207px;
+    cursor:            none;
+}
+.moveComp > .CompFin {
+    height:            7px;
+    margin-top:        50px;
+}
+.CompOk {
+    top:               70px;
+    left:              186px;
+}
+.CajaTop {
+    position:          relative;
+    width:             400px;
+    height:            400px;
+    background:        url(Img/CajaTop.png) no-repeat center 70px;
+    margin:            auto;
+}
+.Caja {
+    position:          absolute;
+    z-index:           1;
+    width:             400px;
+    height:            400px;
+    top:               89px;
+    left:              0px;
+    background:        url(Img/Caja.png) no-repeat center top;
+}
+
+
+/*
+4º Paso | Firma
+*/
+.Cuaderno {
+    position:          relative;
+    width:             620px;
+    height:            500px;
+    background:        url(Img/Cuaderno.png) no-repeat bottom center;
+    margin:            auto;
+    cursor:            none;
+}
+#indicacionesCuaderno {
+    width:             200px;
+    position:          absolute;
+    bottom:            400px;
+    right:             25px;
+}
+#indicacionesCuaderno > div {
+    padding:           7px 10px;
+    background:        #FFF;
+    color:             #666;
+    font-size:         12px;
+    text-align:        center;
+    box-shadow:        0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+#indicacionesCuaderno > div > span {
+    line-height:       22px;
+    font-family:       'Boogaloo', sans-serif;
+    font-size:         22px;
+    color:             #333;
+}
+#firma {
+    position:          absolute;
+    z-index:           2;
+    width:             55px;
+    height:            40px;
+    top:               220px;
+    left:              375px;
+    background:        url(Img/firma.png) no-repeat center;
+}
+#FirmaHuellaLink {
+    position:          absolute;
+    z-index:           20;
+    width:             95px;
+    height:            55px;
+    top:               204px;
+    left:              375px;
+}
+#huella {
+    position:          absolute;
+    z-index:           2;
+    width:             55px;
+    height:            40px;
+    top:               200px;
+    left:              416px;
+    background:        url(Img/huella.png) no-repeat center;
+}
+
+/*
+5º Paso | Manchate el dedo
+*/
+#indicacionesTinta {
+    padding:           30px 0px 70px 0px;
+    width:             170px;
+    margin:            auto;
+    background:        url(Img/flecha_abajo.png) no-repeat bottom left;
+}
+#indicacionesTinta > div {
+    padding:           7px 10px;
+    background:        #FFF;
+    color:             #666;
+    font-size:         12px;
+    text-align:        center;
+    box-shadow:        0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+    
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+#indicacionesTinta > div > span {
+    line-height:       22px;
+    font-family:       'Boogaloo', sans-serif;
+    font-size:         22px;
+    color:             #333;
+}
+.Tintas {
+    position:          relative;
+    width:             300px;
+    height:            300px;
+    background:        url(Img/Tinta.png) no-repeat center 145px;
+    margin:            auto;
+    cursor:            none;
+}
+.TintasTop {
+    position:          absolute;
+    z-index:           1;
+    top:               155px;
+    left:              0px;
+    width:             300px;
+    height:            145px;
+    background:        url(Img/TintaTop.png) no-repeat top center;
+}
+.tintaBlanca, .tintaAzul {
+    position:          absolute;
+    z-index:           25;
+    top:               95px;
+    width:             40px;
+    height:            60px;
+    overflow:          hidden;
+}
+.tintaBlanca           { left:84px; }
+.tintaAzul             { left:178px; }
+.tintaBlanca:hover, .tintaAzul:hover {
+    height:            100px;
+}
+.tintaBlanca div, .tintaAzul div {
+    margin-top:        75px;
+    height:            25px;
+}
+.BlancaOk {
+    top:               40px;
+    left:              79px;
+}
+.AzulOk {
+    top:               40px;
+    left:              173px;
+}
+
+/*
+Final
+*/
+#button_extra_CV {
+	color:				#444;
+	position:			absolute;
+	z-index:			20;
+	bottom:				84px;
+	right:				10px;
+	font-size:			12px;
+}
+#button_extra_CV > span#contacto_link,
+#button_extra_CV > span#credito_link {
+	cursor:				pointer;
+}
+#button_extra_CV > span#contacto_link:hover,
+#button_extra_CV > span#credito_link:hover {
+	text-decoration:	underline;
+}
+#button_extra_CV > span.sep_hor_letras {
+	display:			inline-block;
+	padding:			0px 7px;
+}
+div#REC_orgs {
+	position:			absolute;
+	z-index:			20;
+	width:				100%;
+	padding:			7px;
+	bottom:				0px;
+	left:				0px;
+	background:			rgba(0,0,0,0.2);
+	text-align:			center;
+}
+div#REC_orgs > a {
+	display:			inline-block;
+	height:				60px;
+}
+div#REC_orgs > a.logovi {
+	background:url(Img/logo-vi.png) center no-repeat;
+	width:				140px;
+}
+div#REC_orgs > a.logovj {
+	background:url(Img/logo-vj.png) center no-repeat;
+	width:				150px;
+}
+div#REC_orgs > a.logotv {
+	background:url(Img/logo-tv.png) center no-repeat;
+	width:				160px;
+}
+div#REC_orgs > a.logoua {
+	background:url(Img/logo-ua.png) center no-repeat;
+	width:				110px;
+}
+div#REC_orgs > a.logoep {
+	background:url(Img/logo-ep.png) center no-repeat;
+	width:				90px;
+}
+div#FinCV {
+    width:				465px;
+    position:			relative;
+	z-index:			10;
+    top:				50%;
+    margin-top:			-220px !important; /* CUIDADO */
+}
+.primeraFilaContacto {
+	padding-top:		15px;
+}
+.primeraFilaContacto > div {
+	float:				left;
+	height:				150px;
+}
+.primeraFilaContacto div.titulo {
+	font-family:       'Boogaloo', sans-serif;
+    font-size:         18px;
+    color:             #CCC;
+	padding-top:		20px;
+}
+.primeraFilaContacto div.titulo > span {
+	font-family:       sans-serif;
+    font-size:         12px;
+    color:             #888;
+	padding-top:		-5px;
+	display:			block;
+}
+.primeraFilaContacto > div.sep {
+    width:             10px;
+    background:        url(Img/share_sep.png) no-repeat center;
+}
+.primeraFilaContacto > div.intentaloDeNuevoWrapper {
+    width:             85px;
+}
+.VolverAIntentarlo {
+	height:				76px;
+	width:				76px;
+	margin:				auto;
+	background:			url(Img/VolverAIntentarlo.png) top;
+}
+.VolverAIntentarlo:hover {
+	background:			url(Img/VolverAIntentarlo.png) bottom;
+	cursor:				pointer;
+}
+.primeraFilaContacto > div.primeraFilaLado {
+    width:             180px;
+}
+div#logoFinCV {
+	background:			url(Img/CVlogoFin.png) no-repeat bottom;
+	height:				100px;
+}
+div#share_wrapper > a {
+	float:				left;
+	display:			block;
+	width:				60px;
+	padding-top:		55px;
+	font-size:			11px;
+	color:				#888;
+	text-align:			center;
+	text-decoration:	none;
+}
+div#share_wrapper > a > span {
+	color:				#CCC;
+	font-weight:		bold;
+	display:			block;
+	font-size:			12px;
+}
+div#share_wrapper > a#share_twitter {
+	background:			url(Img/twitter.png) no-repeat left 14px;
+}
+div#share_wrapper > a#share_twitter:hover {
+	background:			url(Img/twitter.png) no-repeat right 14px;
+}
+div#share_wrapper > a#share_facebook {
+	background:			url(Img/facebook.png) no-repeat left 7px;
+}
+div#share_wrapper > a#share_facebook:hover {
+	background:			url(Img/facebook.png) no-repeat right 7px;
+}
+div#share_wrapper > a#share_gplus {
+	background:			url(Img/gplus.png) no-repeat left 9px;
+}
+div#share_wrapper > a#share_gplus:hover {
+	background:			url(Img/gplus.png) no-repeat right 9px;
+}
+div.sep_hor {
+	clear:				both;
+	height:				20px;
+}
+a.denuncialo {
+	display:			inline-block;
+	text-decoration:	none;
+	color:				#555;
+	font-size:			12px;
+	background:			#FFF;
+	padding:			5px 10px 7px 54px;
+	position:			relative;
+	cursor:				pointer;
+
+	-webkit-border-radius:3px;
+    -moz-border-radius:	3px;
+    border-radius:		3px;
+}
+a.denuncialo > .pointer_map {
+	width:				51px;
+	height:				52px;
+	background:			url(Img/DenunciaMapa.png);
+	position:			absolute;
+	top:				-10px;
+	left:				2px;
+}
+div.se_voluntario {
+	display:			inline-block;
+	color:				#555;
+	font-size:			12px;
+	background:			#FFF;
+	padding:			5px 10px 7px 10px;
+	position:			relative;
+	cursor:				pointer;
+
+	-webkit-border-radius:3px;
+    -moz-border-radius:	3px;
+    border-radius:		3px;
+}
+div.se_voluntario > div.puzzle_voluntario {
+	width:				43px;
+	height:				43px;
+	background:			url(Img/voluntario.png);
+	position:			absolute;
+	top:				-11px;
+	right:				2px;
+}
+a.denuncialo > span,
+div.se_voluntario > span {
+	display:			block;
+	font-family:       'Boogaloo', sans-serif;
+    font-size:         20px;
+    color:             #222;
+}
+div.se_voluntario > span {
+	line-height:		18px;
+	padding-right:		30px;
+}
+.boton_chato {
+	display:			inline-block;
+	text-decoration:	none;
+	background:			#FFF;
+	color:				#555;
+	font-size:			12px;
+	width:				147px;
+	position:			relative;
+	cursor:				pointer;
+
+	-webkit-border-radius:3px;
+    -moz-border-radius:	3px;
+    border-radius:		3px;
+}
+.boton_chato div {
+	padding:			5px;
+}
+.boton_chato span {
+	display:			block;
+	font-family:		'Boogaloo', sans-serif;
+    font-size:			16px;
+    color:				#222;
+}
+
+.denuncialo:hover,
+.se_voluntario:hover,
+.boton_chato:hover {
+	box-shadow:			0 0 16px rgba(153,0,153,.5);
+}
+
+.form_voluntario_wrapper {
+	overflow:			hidden;
+	height:				250px;
+}
+.todo_ok_submit_voluntario {
+	height:				240px;
+}
+.todo_ok_submit_voluntario div {
+	padding-top:		95px;
+	background:			url(Img/check.png) no-repeat center;
+	text-align:			center;
+	color:				#555;
+	font-size:			12px;
+}
+.todo_ok_submit_voluntario div span {
+	font-family:		'Boogaloo', sans-serif;
+    font-size:			20px;
+    color:				#222;
+	display:			block;
+}
+
+#creditos, #contacto {
+    position:          absolute;
+    z-index:           30;
+    top:               50%;
+    right:             50%;
+    width:             200px;
+    margin-top:        -115px !important;
+    margin-right:      -100px !important;
+    background:        #FFF;
+    box-shadow:        0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);
+    
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:     3px;
+}
+#contacto {
+    margin-top:        -81px !important;
+}
+#creditos > div, #contacto > div {
+    padding:           20px;
+    text-align:        left;
+}
+#contacto > div {
+    font-size:         11px;
+    color:             #666;
+}
+#contacto a {
+    color:             rgb(19,13,115);
+    text-decoration:   none;
+}
+#contacto a:hover {
+    text-decoration:   underline;
+}
+#creditos .tituloCreditos, #contacto .tituloContacto {
+    padding-bottom:    10px;
+    border-bottom:     solid 1px #CCC;
+    font-family:       'Boogaloo', sans-serif;
+    font-size:         20px;
+    color:             #333;
+}
+#creditos #cerrarCred, #contacto #cerrarCont, .cerrar_mas_info {
+    position:          absolute;
+    top:               15px;
+    right:             10px;
+    height:            14px;
+    width:             14px;
+    background:        url(Img/cerrar.png) no-repeat center #59157C;
+    cursor:            pointer;
+
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+   border-radius:     3px;
+}
+#creditos #cerrarCred:hover,
+#contacto #cerrarCont:hover,
+.cerrar_mas_info:hover {
+    background-color:  #851686;
+}
+#creditos .credPersona, #creditos .logoCreditos {
+    display:           block;
+    text-decoration:   none;
+    padding-top:       10px;
+    font-size:         11px;
+    color:             #666;
+}
+#creditos .credPersona > span {
+    font-family:       'Boogaloo', sans-serif;
+    font-size:         15px;
+    color:             #333;
+}

@@ -1,0 +1,32 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Proyect Supervisor: Andres Azpurua
+  Designer and developer: Alejandro Flores
+  Site: VenezuelaInteligente.org
+  Twitter: @vzlaInteligente
+  Location: Caracas, Venezuela
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: jQuery
+
+
+
+
+  
+  
+  ▶▶          ▶▶              __      __                             _         _____       _        _ _                  _        
+  ▶▶▶▶▶▶      ▶▶▶▶▶▶          \ \    / /                            | |       |_   _|     | |      | (_)                | |       
+  ▶▶▶▶▶▶▶▶▶▶  ▶▶▶▶▶▶▶▶▶▶       \ \  / /___ _ __   ___ _____   _  ___| | __ _    | |  _ __ | |_  ___| |_  __ _  ___ _ __ | |_  ___ 
+  ▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶     \ \/ // _ \ '_ \ / _ \_  / | | |/ _ \ |/ _` |   | | | '_ \| __|/ _ \ | |/ _` |/ _ \ '_ \| __|/ _ \
+  ▶▶▶▶▶▶▶▶▶▶  ▶▶▶▶▶▶▶▶▶▶         \  /|  __/ | | |  __// /| |_| |  __/ | (_| |  _| |_| | | | |_|  __/ | | (_| |  __/ | | | |_|  __/
+  ▶▶▶▶▶▶      ▶▶▶▶▶▶              \/  \___|_| |_|\___/___|\__,_|\___|_|\__,_| |_____|_| |_|\__|\___|_|_|\__, |\___|_| |_|\__|\___|
+  ▶▶          ▶▶                                                                                         __/ |                    
+                                                                                                        |___/                     
+    
+    
+    
+    

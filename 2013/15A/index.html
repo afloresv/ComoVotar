@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <title> ComoVotar.com | &iquest;C&oacute;mo votar? | Venezuela Inteligente</title>
+
+    <!-- METAS -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="Aprende como votar en la eleccion 
+		del 16 de diciembre en ComoVotar.com,simulador de las elecciones 
+		regionales 2012. Por: Venezuela Inteligente y Voto Joven"/>
+    <meta name="keywords" content="como votar,comovotar, como se vota, 
+		elecciones 16 de diciembre,simulador como votar,simulador para votar,
+		como votar 16 de diciembre,regionales 2012 venezuela,regionales 2012,
+		como se vota en venezuela" />
+    <meta name="APPLICATION-NAME" content="&iquest;c&oacute;mo votar?">
+
+    <meta property="og:title" content="&#xbf;C&#xf3;mo Votar?"/>
+    <meta property="og:type" content="website" />
+	<meta property="og:url" content="http://comovotar.com" />
+    <meta property="og:image" content="http://comovotar.com/Img/site-image.png" />
+    <meta property="og:image" content="http://comovotar.com/Img/CV.png" />
+    <meta property="og:image" content="http://comovotar.com/Img/CVlogo.png" />
+    <meta property="og:image" content="http://comovotar.com/Img/Venezuela-Inteligente.jpg" />
+    <meta property="og:site_name" content="&#xbf;C&#xf3;mo Votar?" />
+    <meta property="fb:admins" content="754995327"/>
+    <meta property="og:description"  content="Aprende a votar este 16 de diciembre en ComoVotar.com"/>
+    <meta property="og:title" content="ComoVotar.com" />
+    <meta property="fb:app_id" content="116668815147018" /> 
+    
+    <!-- CSS -->
+    <link href='style.css' rel='stylesheet' type='text/css'>
+	<link href='bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
+    
+</head>
+<body>
+    <img src="Img/site-image.png" alt="simulador como votar" style="display:none" />
+
+    <div id="spin"></div>
+    
+    <script src="js/spin.min.js"></script>
+    <script type="text/javascript">
+        var opts = {
+          lines: 13, // The number of lines to draw
+          length: 9, // The length of each line
+          width: 2, // The line thickness
+          radius: 9, // The radius of the inner circle
+          corners: 1, // Corner roundness (0..1)
+          rotate: 50, // The rotation offset
+          color: '#FFF', // #rgb or #rrggbb
+          speed: 1.5, // Rounds per second
+          trail: 73, // Afterglow percentage
+          shadow: true, // Whether to render a shadow
+          hwaccel: false, // Whether to use hardware acceleration
+          className: 'spinner', // The CSS class to assign to the spinner
+          zIndex: 2e9, // The z-index (defaults to 2000000000)
+          top: 'auto', // Top position relative to parent in px
+          left: 'auto' // Left position relative to parent in px
+        };
+        var target = document.getElementById('spin');
+        var spinner = new Spinner(opts).spin(target);
+    </script>
+    
+    <div id="wrapper">
+        <div>
+            <div class="hand hand_cedula needed"></div>
+            <div id="Portada">
+                <div class="REClogo"></div>
+                <div id="PortadaAll" class="needed"></div>
+                <div id="comenzar">
+                    <div class="comenzar_cont">
+                        <span>Para comenzar</span><br>
+                        Haz click en el recuadro de la c&eacute;dula.
+                        <div class="entregaTuCedula needed"></div>
+                        <div class="entregaLink"></div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div>
+            <div class="header needed">
+                <div class="inicio"></div>
+                <div class="active">
+                    <div class="num">1</div>
+                    <div class="paso">&ordm; paso</div>
+                    <div class="desc" style="padding-left:15px;">Identif&iacute;cate</div>
+                </div>
+                <span class="goTo2">2</span>
+                <span class="goTo3">3</span>
+                <span class="goTo4">4</span>
+                <span class="goTo5">5</span>
+            </div>
+            
+            <!-- Contenido Maquinas de Votacion -->
+            <div class="hand thumb needed"></div>
+            
+            <div class="back_window back_paso1"></div>
+            <div class="mas_info info_paso1"><div>
+                <div class="cerrar_mas_info"></div>
+                <div class="mas_info_subtitulo">Paso 1</div>
+                <div class="mas_info_titulo">M&aacute;s informaci&oacute;n</div>
+                <div class="mas_info_cont">
+                    <p>Si las m&aacute;quinas fallan luego de 90 
+						minutos puedes solicitar pasar a voto manual.</p>
+                    <p>El <i>SAI</i> no desbloquea la m&aacute;quina 
+						de votaci&oacute;n, lo hace el presidente de 
+						mesa luego de verificar la identidad del elector 
+						a trav&eacute;s presentar la C.I.</p>
+                    <p>El <i>SAI</i> no guarda ninguna 
+						informaci&oacute;n sobre el voto emitido.</p>
+                </div>
+            </div></div>
+            
+            <div class="Lector needed">
+                
+                <div class="mas_info_button" style="top:200px; left:402px" ></div>
+                <div class="mas_info_button_link mas_info_button_paso1" style="top:200px; left:402px" ></div>
+                
+                <div id="hand_PresidenteMesa"></div>
+                <div id="indicacionesHuella"><div>
+		            <span>Pon tu huella en la m&aacute;quina</span><br>
+                    <p style="padding-top:10px;">El presidente de la mesa verificar&aacute; 
+						tu informaci&oacute;n mediante el <i>Sistema de Autenticaci&oacute;n 
+						Integrado</i> y te pedirá que pongas tu huella.</p>
+                    <p><b>El presidente activar&aacute; la m&aacute;quina de votaci&oacute;n 
+						presionando el bot&oacute;n azul.</b></p>
+                </div></div>
+                <div class="huella"></div>
+                <div class="huellaLink"></div>
+            </div>
+            <!-- /Fin -->
+        </div>
+        <div>
+        
+            <!-- Tarjeton Real -->
+            <div id="TarjetonReal">
+                <div class="tarjetonHeader">
+                    Tarjet&oacute;n Electoral<br><span>Elecci&oacute;nes Presidenciales 
+						del 14 de abril de 2013</span>
+                    <div id="cerrarTarjeton"></div>
+                </div>
+                <div class="tarjetonImagen"></div>
+            </div>
+            
+            <div class="header">
+                <div class="inicio"></div>
+                <span class="goTo1">1</span>
+                <div class="active">
+                    <div class="num">2</div>
+                    <div class="paso">&ordm; paso</div>
+                    <div class="desc">&#161;A votar&#33;</div>
+                </div>
+                <span class="goTo3">3</span>
+                <span class="goTo4">4</span>
+                <span class="goTo5">5</span>
+            </div>
+            
+            <!-- Contenido Maquinas de Votacion -->
+            <div class="hand point needed"></div>
+            
+            <div class="back_window back_paso2"></div>
+            <div class="mas_info info_paso2"><div>
+                <div class="cerrar_mas_info"></div>
+                <div class="mas_info_subtitulo">Paso 2</div>
+                <div class="mas_info_titulo">M&aacute;s informaci&oacute;n</div>
+                <div class="mas_info_cont">
+                    <p>Puedes solicitar que se coloque un segundo parab&aacute;n arriba 
+						del primero, para que no se pueda ver los movimientos al votar.</p>
+                    <p>El voto se archiva en un compartimiento que constantemente se 
+						mezcla para que no se conozca el orden del voto adem&aacute;s 
+						de guardarse encriptado.</p>
+                </div>
+            </div></div>
+            
+            <div class="MaquinasVotacion needed">
+            
+                <div class="mas_info_button" style="top:10px; left:91px" ></div>
+                <div class="mas_info_button_link mas_info_button_paso2" style="top:10px; left:91px" ></div>
+            
+                <div id="verTarjeton">¿Quieres ver el tarjet&oacute;n?</div>
+                <div id="verTarjetonLink"></div>
+            
+                <div class="clock">
+                    <span class="texto_clock">Te quedan</span><br>
+                    <span class="clock_ms">6:00</span><br>
+                    <span class="texto_clock">minutos para votar !</span>
+                </div>
+            
+                <div class="Pantalla">
+                    <div class="duringVote">
+                        <div class="showVoto">
+                            <div class="showTituloVoto">Voto Emitido</div>
+                            <div class="showNadie">Nadie</div>
+                            <div class="showPartido"></div>
+                            <div class="showCandidato"></div>
+                        </div>
+                        <div class="botonVotar">Votar</div>
+                    </div>
+                    <div class="mensajeError">
+                        Usted dejó voto(s) sin<br>seleccionar<br>
+                        <span>Seleccionar</span>
+                        <span>Votar</span>
+                    </div>
+                    <div class="showTextoFin">
+                        TOME EL COMPROBANTE DE VOTO Y<br>
+                        DEPOSITELO EN LA CAJA DE<br>
+                        RESGUARDO
+                        <div>FIN</div>
+                    </div>
+                </div>
+                <div class="botonVotarLink"></div>
+                <div class="nuloLink"></div>
+                <div class="mESeleccionar"></div>
+                <div class="mEVotar"></div>
+                
+                <div class="ComprobanteAnim"></div>
+            
+                <div class="TarjetonLink">
+                    <div class="CandidatoLink" title="Candidato A | Partido 1"></div>
+                    <div class="CandidatoLink" title="Candidata B | Partido 2"></div>
+                    <div class="CandidatoLink" title="Candidato A | Partido 3"></div>
+                    <div class="CandidatoLink" title="Candidata B | Partido 4"></div>
+                    <div class="CandidatoLink" title="Candidata B | Partido 5"></div>
+                    <div class="CandidatoLink" title="Candidata B | Partido 6"></div>
+                    <div class="CandidatoLink" title="Candidato A | Partido 7"></div>
+                    <div class="Hueco"></div>
+                    <div class="CandidatoLink" title="Candidato A | Partido 8"></div>
+                    <div class="Hueco"></div>
+                    <div class="Hueco"></div>
+                    <div class="CandidatoLink" title="Candidata B | Partido 9"></div>
+                    <div class="CandidatoLink" title="Candidata B | Partido 10"></div>
+                    <div class="CandidatoLink" title="Candidato A | Partido 11"></div>
+                    <div class="CandidatoLink" title="Candidata B | Partido 12"></div>
+                    <div class="CandidatoLink" title="Candidata B | Partido 13"></div>
+                    <div class="CandidatoLink" title="Candidato A | Partido 14"></div>
+                    <div class="CandidatoLink" title="Candidato A | Partido 15"></div>
+                    <div class="CandidatoLink" title="Candidata B | Partido 16"></div>
+                    <div class="CandidatoLink" title="Candidata B | Partido 17"></div>
+                    <div class="CandidatoLink" title="Candidato A | Partido 18"></div>
+                    <div class="CandidatoLink" title="Candidato A | Partido 19"></div>
+                    <div class="CandidatoLink" title="Candidato A | Partido 20"></div>
+                    <div class="CandidatoLink" title="Candidata B | Partido 21"></div>
+                    <div class="CandidatoLink" title="Candidata B | Partido 22"></div>
+                    <div class="Hueco"></div>
+                    <div class="Hueco"></div>
+                    <div class="CandidatoLink" title="Candidato A | Partido 23"></div>
+                </div>
+                <div class="Tarjeton">
+                    <div id="led"></div>
+                    <div class="TituloTarjeton">
+                        Nacional
+                        <span>ELECCION PRESIDENCIAL 2012<br>Presidente o Presidenta de la Republica</span>
+                    </div>
+                    <div class="Candidato"><span>Partido 1</span></div>
+                    <div class="Candidata"><span>Partido 2</span></div>
+                    <div class="Candidato"><span>Partido 3</span></div>
+                    <div class="Candidata"><span>Partido 4</span></div>
+                    <div class="Candidata"><span>Partido 5</span></div>
+                    <div class="Candidata"><span>Partido 6</span></div>
+                    <div class="Candidato"><span>Partido 7</span></div>
+                    <div class="Hueco"></div>
+                    <div class="Candidato"><span>Partido 8</span></div>
+                    <div class="Hueco"></div>
+                    <div class="Hueco"></div>
+                    <div class="Candidata"><span>Partido 9</span></div>
+                    <div class="Candidata"><span>Partido 10</span></div>
+                    <div class="Candidato"><span>Partido 11</span></div>
+                    <div class="Candidata"><span>Partido 12</span></div>
+                    <div class="Candidata"><span>Partido 13</span></div>
+                    <div class="Candidato"><span>Partido 14</span></div>
+                    <div class="Candidato"><span>Partido 14</span></div>
+                    <div class="Candidata"><span>Partido 16</span></div>
+                    <div class="Candidata"><span>Partido 17</span></div>
+                    <div class="Candidato"><span>Partido 18</span></div>
+                    <div class="Candidato"><span>Partido 19</span></div>
+                    <div class="Candidato"><span>Partido 20</span></div>
+                    <div class="Candidata"><span>Partido 21</span></div>
+                    <div class="Candidata"><span>Partido 22</span></div>
+                    <div class="Hueco"></div>
+                    <div class="Hueco"></div>
+                    <div class="Candidato"><span>Partido 23</span></div>
+                </div>
+            </div>
+            <!-- /Fin -->
+            
+        </div>
+        <div>
+            <div class="header">
+                <div class="inicio"></div>
+                <span class="goTo1">1</span>
+                <span class="goTo2">2</span>
+                <div class="active">
+                    <div class="num">3</div>
+                    <div class="paso">&ordm; paso</div>
+                    <div class="desc">Resguarda tu voto</div>
+                </div>
+                <span class="goTo4">4</span>
+                <span class="goTo5">5</span>
+            </div>
+            
+            <!-- Contenido Cajas -->
+            
+            <div id="mensaje3"><div>
+                <b>Revisa tu...</b>
+                <div class="compVota"></div>
+                <div class="datosVota">
+                    Candidato: <b>Candidato A</b>
+                    Partido: <b>Partido H</b>
+                </div>
+                Despu&eacute;s de revisar tu comprobante y verificar que refleja 
+					tu voto, debes introducirlo en la caja de resguardo.
+                <div class="cerrarMensaje">Continuar</div>
+            </div></div>
+            
+            <div class="back_window back_paso3"></div>
+            <div class="mas_info info_paso3"><div>
+                <div class="cerrar_mas_info"></div>
+                <div class="mas_info_subtitulo">Paso 3</div>
+                <div class="mas_info_titulo">M&aacute;s informaci&oacute;n</div>
+                <div class="mas_info_cont">
+                    <p>Se realiza el conteo del 54% de las cajas para verificar que 
+						las actas coinciden con las boletas de votaci&oacute;n.</p>
+                    <p>La selecci&oacute;n de las mesas para contar los votos en las 
+						cajas se hace al azar una vez que todas las mesas del centro 
+						est&aacute;n cerradas.</p>
+                    <p>Las actas emitidas deben coincidir con los resultados emitidos 
+						por el <b>CNE</b> y cada testigo.</p>
+                </div>
+            </div></div>
+            
+            <div class="hand hand_comprobante"></div>
+            
+            <div class="CajaTop">
+                
+                
+                <div class="mas_info_button" style="top:45px; left:295px" ></div>
+                <div class="mas_info_button_link mas_info_button_paso3" style="top:45px; left:295px" ></div>
+                
+                <div class="Caja"></div>
+                <div class="moveComp">
+                    <div class="CompFin"></div>    
+                </div>
+                <div class="CompOk"></div>
+            </div>
+            <!-- /Fin -->
+        </div>
+        <div>
+            <div class="header">
+                <div class="inicio"></div>
+                <span class="goTo1">1</span>
+                <span class="goTo2">2</span>
+                <span class="goTo3">3</span>
+                <div class="active">
+                    <div class="num">4</div>
+                    <div class="paso">&ordm; paso</div>
+                    <div class="desc" style="margin-left:23px; padding-left:30px;">
+						Firma y pon tu huella
+					</div>
+                </div>
+                <span class="goTo5">5</span>
+            </div>
+            <!-- Contenido Cuaderno -->
+            <div id="hand_cuaderno" class="hand hand_firma"></div>
+            <div class="Cuaderno">
+                <div id="indicacionesCuaderno">
+                    <div><span>Firma y pon tu huella</span><br>Solo haz click 
+						en la franja naranja.</div>
+                </div>
+                <div id="firma"></div>
+                <div id="huella"></div>
+                <div id="FirmaHuellaLink"></div>
+            </div>
+            <!-- /Fin -->
+        </div>
+        <div>
+            <div class="header">
+                <div class="inicio"></div>
+                <span class="goTo1">1</span>
+                <span class="goTo2">2</span>
+                <span class="goTo3">3</span>
+                <span class="goTo4">4</span>
+                <div class="active">
+                    <div class="num">5</div>
+                    <div class="paso">&ordm; paso</div>
+                    <div class="desc" style="margin-left:23px; padding-left:30px;">
+						M&aacute;nchate el dedo
+					</div>
+                </div>
+            </div>
+            <!-- Contenido Tintas -->
+            <div class="hand hand_dedo">
+                <div class="dedoManchado"></div>
+            </div>
+            <div class="Tintas">
+                <div id="indicacionesTinta">
+                    <div>Sumerge el dedo en el<br><span>Desengrasante</span></div>
+                </div>
+                <div class="TintasTop">
+                    <div class="BlancaOk"></div>
+                    <div class="AzulOk"></div>
+                </div>
+                <div class="tintaBlanca">
+                    <div class="tintaBlancaFin"></div>
+                </div>
+                <div class="tintaAzul">
+                    <div class="tintaAzulFin"></div>
+                </div>
+            </div>
+            <!-- /Fin -->
+        </div>
+        <div>
+			
+			<div id="REC_orgs">
+				<a href="#" class="logoep" data-toggle="tooltip" title="Espacio P&uacute;blico"></a>
+				<a href="#" class="logovj" data-toggle="tooltip" title="VotoJoven"></a>
+				<a href="#" class="logovi" data-toggle="tooltip" title="Venezuela Inteligente"></a>
+				<a href="#" class="logoua" data-toggle="tooltip" title="Usted Abus&oacute;"></a>
+				<a href="#" class="logotv" data-toggle="tooltip" title="Transparencia Venezuela"></a>
+			</div>
+			<div id="button_extra_CV">
+				<span id="contacto_link">Contacto</span>
+				<span class="sep_hor_letras">|</span>
+				<span id="credito_link">Cr&eacute;ditos</span>
+			</div>
+			
+			<div class="back_window back_general"></div>
+
+			<div class="mas_info form_voluntario_wrapper"><div>
+                <div class="cerrar_mas_info"></div>
+				<div class="todo_ok_submit_voluntario">
+					<div>
+						<span>&#161;Gracias&#33;</span>
+						Te estaremos contactando lo antes posible.<br>
+						<b>Venezuela</b> se hace grande cuando<br>todos participamos activamente.
+					</div>
+				</div>
+                <div class="mas_info_titulo">Se voluntario</div>
+                <div>An&oacute;tate como voluntario de la RED en estas elecciones</div>
+				<form class="form-horizontal" id="form_voluntario">
+					<div style="height:10px;"></div>
+					<input type="text" class="input-block-level"
+						name="entry.1185635224" placeholder="Nombre y apellido"><br>
+					<div style="height:10px;"></div>
+					<input type="email" class="input-block-level"
+						name="entry.243161664" placeholder="E-mail"><br>
+					<div style="height:10px;"></div>
+					<select class="input-block-level"
+						name="entry.1111899001">
+						<option>Cualquier cosa, ayudar en general</option>
+						<option>Actividades de calle</option>
+						<option>Reportar abusos electorales</option>
+						<option>Algo desde mi casa</option>
+						<option>Programar, dise&#241;ar u otra especialidad</option>
+					</select>
+					<div style="height:10px;"></div>
+					<div style="text-align:right;">
+						<button type="button" class="btn btn-primary"
+							name="submit" id="submit_voluntario">
+							Enviar
+						</button>
+					</div>
+				</form>
+            </div></div>
+            
+            <div id="creditos"><div>
+                <div id="cerrarCred"></div>
+                <div class="tituloCreditos">Cr&eacute;ditos</div>
+                <a class="logoCreditos" href="http://venezuelainteligente.org">
+                    <img src="Img/Venezuela-Inteligente.jpg" alt="Venezuela Inteligente"  />
+                </a>
+                <a class="credPersona" href="http://www.AnkStudio.com/" target="_blank">
+                    <span>Alejandro Flores</span><br>
+                    Desarrollo y dise&ntilde;o web. Ilustraciones 3D.
+                </a>
+                <a class="credPersona" href="http://www.AndresAzp.com/" target="_blank">
+                    <span>Andr&eacute;s Azpurua</span><br>
+                    Direcci&oacute;n de proyecto y concepto.
+                </a>
+            </div></div>
+
+            <div id="contacto"><div>
+                <div id="cerrarCont"></div>
+                <div class="tituloContacto">Contacto</div>
+                <div style="padding-top:10px;">
+                Puedes contactarte con nosotros a trav&eacute;s de 
+					<a href="mailto:info@venezuelainteligente.org">
+						info@venezuelainteligente.org
+					</a> y <a href="mailto:comunicaciones@votojoven.com">
+					comunicaciones@votojoven.com</a><br>
+                o tambien puedes dejarnos tus <b>comentarios</b> 
+				<a target="_blank" href="https://docs.google.com/spreadsheet/embeddedform?formkey=dG9wQkNzNHktTzlocDd6akZXR1hhMEE6MA">aqu&iacute;</a>.
+                </div>
+            </div></div>
+
+
+            <div id="FinCV">
+				<div class="REClogo"></div>
+				<div class="primeraFilaContacto">
+					<div class="primeraFilaLado">
+						<div class="titulo">
+							Felicitaciones
+							<span>Ya sabes</span>
+						</div>
+						<div id="logoFinCV"></div>
+					</div>
+					<div class="sep"></div>
+					<div class="intentaloDeNuevoWrapper">
+						<div class="titulo">&#161;Int&eacute;ntalo<br>de nuevo&#33;</div>
+						<div class="VolverAIntentarlo"></div>
+					</div>
+					<div class="sep"></div>
+					<div class="primeraFilaLado">
+						<div class="titulo">&#161;Comp&aacute;rtelo&#33;</div>
+						<div id="share_wrapper">
+							<a id="share_twitter"
+								href="https://twitter.com/intent/tweet?source=comovotar.com&text=%23YoEstoyDispuesto+a+aprender+y+enseñar+%23ComoVotar+entra+en+http%3A%2F%2FComoVotar.com+%2Fvia%3A+%40vzlaInteligente+%40votojoven"
+								target="_blank">
+								Twitter
+								<span></span>
+							</a>
+							<a id="share_facebook"
+								href="http://www.facebook.com/sharer.php?u=www.comovotar.com"
+								target="_blank">
+								Facebook
+								<span></span>
+							</a>
+							<a id="share_gplus"
+								href="https://plus.google.com/share?url=www.comovotar.com"
+								target="_blank">
+								Google+
+								<span></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="sep_hor"></div>
+				<div class="se_voluntario">
+					<span>&#191;Quieres<br>ayudar&#63;</span>
+					Forma parte del equipo
+					<div class="puzzle_voluntario"></div>
+				</div>
+				<a class="denuncialo" href="http://eleccionciudadana.com/" target="_blank">
+					<span>Denuncia</span>
+					irregularidades<br>
+					este <b style="color:#333;">14A</b>
+					<div class="pointer_map"></div>
+				</a>
+				<div style="height:4px;"></div>
+				<a href="http://eleccionciudadana.com/info" target="_blank" class="boton_chato"><div>
+					<span>M&aacute;s informaci&oacute;n</span>
+					sobre la elecci&oacute;n
+				</div></a>
+				<a href="http://eleccionciudadana.com/auditorias" target="_blank" class="boton_chato"><div>
+					Aprende m&aacute;s sobre las
+					<span>Auditorias</span>
+				</div></a>
+			</div>
+
+
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.9.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/functions.js"></script>
+	<script src="js/share.js"></script>
+    <script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34540294-2']);
+      _gaq.push(['_setDomainName', 'comovotar.com']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_setLocalRemoteServerMode']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
+    
+</body>
+</html>
